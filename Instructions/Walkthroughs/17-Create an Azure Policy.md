@@ -1,86 +1,86 @@
 ---
 wts:
-    title: '17 - Azure Policy の作成 (10 分)'
-    module: 'モジュール 05: ID、ガバナンス、プライバシー、およびコンプライアンス機能に関する説明'
+  title: 17 - Azure Policy の作成 (10 分)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
 ---
-# 17 - Azure Policy の作成 (10 分)
+# <a name="17---create-an-azure-policy-10-min"></a>17 - Azure Policy の作成 (10 分)
 
 このチュートリアルでは、Azure リソースのデプロイを特定の場所に制限する Azure Policy を作成します。
 
-# タスク 1: ポリシー割り当てを作成する 
+# <a name="task-1-create-a-policy-assignment"></a>タスク 1:ポリシー割り当てを作成する 
 
-このタスクでは、許可されている場所のポリシーを構成し、サブスクリプションに割り当てます。 
+このタスクでは、許可された場所のポリシーを構成し、サブスクリプションに割り当てます。 
 
-1. Azure portal　(`https://portal.azure.com`) にサインインします。
+1. [Azure portal](https://portal.azure.com) にサインインします。
 
-2. 「**すべてのサービス**」ブレードで、「**ポリシー**」を検索して選択し、「**作成**」セクションで「**定義**」をクリックします。  組み込みのポリシー定義の一覧を確認します。たとえば、「**カテゴリ**」ドロップダウンで「**計算**」のみを選択します。「**許可された仮想マシン サイズ SKU**」定義により、自分の組織がデプロイできる仮想マシン SKU のセットを指定できます。
+2. From the <bpt id="p1">**</bpt>All services<ept id="p1">**</ept> blade, search for and select <bpt id="p2">**</bpt>Policy<ept id="p2">**</ept>, under the <bpt id="p3">**</bpt>Authoring<ept id="p3">**</ept> section click <bpt id="p4">**</bpt>Definitions<ept id="p4">**</ept>.  Take a moment to review the list of built-in policy definitions. For example, in the <bpt id="p1">**</bpt>Category<ept id="p1">**</ept> drop-down select only <bpt id="p2">**</bpt>Compute<ept id="p2">**</ept>. Notice the <bpt id="p1">**</bpt>Allowed virtual machine size SKUs<ept id="p1">**</ept> definition enables you to specify a set of virtual machine SKUs that your organization can deploy.
 
-3. 「**ポリシー**」 ページに戻り、「**作成**」 セクションの「**割り当て**」をクリックします。割り当ては、特定のスコープ内で実行するように割り当てられたポリシーです。たとえば、サブスクリプションのスコープに定義を割り当てることができます。 
+3. Return to the <bpt id="p1">**</bpt>Policy<ept id="p1">**</ept> page, under the <bpt id="p2">**</bpt>Authoring<ept id="p2">**</ept> section click <bpt id="p3">**</bpt>Assignments<ept id="p3">**</ept>. An assignment is a policy that has been assigned to take place within a specific scope. For example, a definition could be assigned to the subscription scope. 
 
-4. 「**ポリシー - 割り当て**」 ページの上部の「**ポリシーの割り当て**」をクリックします。
+4. **[ポリシー - 割り当て]** ページの上部にある **[ポリシーの割り当て]** をクリックします。
 
-5. 「**ポリシーの割り当て**」ページで、既定のスコープを維持します。
+5. **[ポリシーの割り当て]** ページで、既定のスコープを維持します。
 
       | 設定 | 値 | 
     | --- | --- |
-    | スコープ| **選択された既定値を使用**|
-    | ポリシー定義 | 楕円をクリックし、「**許可されている場所**」を検索して、「**選択**」をクリックする |
+    | スコープ| **選択された既定値を使用する**|
+    | ポリシー定義 | 省略記号をクリックし、「**許可されている場所**」を検索して、**[選択]** をクリックする |
     | 割り当て名 | **許可されている場所** |
     
-    ![フィールド値が入力され、選択ボタンが強調表示された「スコープ」ペインのスクリーンショット。 ](../images/1402.png)
-6. 「**パラメーター**」タブで、「**日本西部**」を選択します。「**確認および作成**」をクリックし、「**作成**」をクリックします。
+    ![フィールド値が入力され、[選択] ボタンが強調表示されている [スコープ] ペインのスクリーンショット。 ](../images/1402.png)
+6. On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, select <bpt id="p2">**</bpt>Japan West<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 
-    **注**: スコープによって、ポリシーの割り当てが適用されるリソース、またはリソースのグループが決まります。このポリシーを特定のリソース グループに割り当てることができますが、ポリシーをサブスクリプション レベルで割り当てることもできます。スコープの構成によって、リソースが除外される場合があることにご注意ください。除外はオプションです。
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A scope determines what resources or grouping of resources the policy assignment applies to. In our case we could assign this policy to a specific resource group, however we chose to assign the policy at subscription level. Be aware that resources can be excluded based on the scope configuration. Exclusions are optional.
 
-    **注**: この「**許可されている場所**」ポリシー定義では、すべてのリソースがデプロイされる場所を指定します。別の場所が選択されている場合、デプロイは許可されません。詳細については、[Azure Policy Samples](https://docs.microsoft.com/ja-jp/azure/governance/policy/samples/index) ページをご覧ください。
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This <bpt id="p2">**</bpt>Allowed Locations<ept id="p2">**</ept> policy definition will specify a location into which all resources must be deployed. If a different location is chosen, deployment will not be allowed. For more information view the <bpt id="p1">[</bpt>Azure Policy Samples<ept id="p1">](https://docs.microsoft.com/en-us/azure/governance/policy/samples/index)</ept> page.
 
-   ![さまざまなフィールドが強調表示され、「管理対象ディスクを使用しない VM を監査する」オプションが選択された「利用可能な定義」ウィンドウのスクリーンショット。](../images/1403.png)
+   ![さまざまなフィールドが強調表示され、[マネージド ディスクを使用していない VM の監査] オプションが選択されている [使用可能な定義] ペインのスクリーンショット。](../images/1403.png)
 
-9. 「**許可されている場所**」ポリシーの割り当てが「**ポリシー - 割り当て**」ペインにリストされて適用されます。指定したスコープ レベル (サブスクリプション レベル) でポリシーが適用されます。
+9. これで、**[許可されている場所]** ポリシーの割り当てが **[ポリシー - 割り当て]** ペインに一覧表示され、配置されました。指定したスコープ レベル (サブスクリプション レベル) でポリシーが適用されます。
 
-# タスク 2: 許可されている場所のポリシーをテストする
+# <a name="task-2-test-allowed-location-policy"></a>タスク 2:許可された場所のポリシーをテストする
 
-このタスクでは、許可されている場所のポリシーをテストします。 
+このタスクでは、許可された場所のポリシーをテストします。 
 
-1. Azure Portal の **「すべてのサービス」** ブレードで、**「ストレージ アカウント」** を検索して選択し、**「+ 作成」** をクリックします。
+1. Azure Portal の **[すべてのサービス]** ブレードで、 **[ストレージ アカウント]** を検索して選択し、 **[+ 作成]** をクリックします。
 
-2. ストレージ アカウントを構成します (ストレージ アカウント名の **xxxx** は、名前がグローバルに一意になる文字と数字に置き換えます)。その他は既定値のままにします。 
+2. Configure the storage account (replace <bpt id="p1">**</bpt>xxxx<ept id="p1">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else. 
 
     | 設定 | 値 | 
     | --- | --- |
-    | サブスクリプション | **提供されている既定値を使用** |
-    | リソース グループ | **myRGPolicy** (新規作成) |
+    | サブスクリプション | **提供された既定値を使用する** |
+    | Resource group | **myRGPolicy** (新規作成) |
     | ストレージ アカウント名 | **storageaccountxxxx** |
     | 場所 | **(米国) 米国東部** |
 
-3. 「**確認および作成**」 をクリックしてから 「**作成**」 をクリックします。 
+3. **[Review + create]\(レビュー + 作成\)** をクリックし、 **[作成]** をクリックします。 
 
-4. 「**許可されている場所**」ポリシー名を含む、リソースがポリシーにより許可されないことを示す**デプロイ失敗**エラーが表示されます。
+4. **[許可されている場所]** ポリシー名を含め、リソースがポリシーによって許可されなかったことを示す **[デプロイの失敗]** エラーが表示されます。
 
-# タスク 3: ポリシーの割り当てを削除する
+# <a name="task-3-delete-the-policy-assignment"></a>タスク 3:ポリシーの割り当てを削除する
 
-このタスクでは、許可されている場所のポリシーの割り当てを削除してテストします。 
+このタスクでは、許可された場所のポリシーの割り当てを削除してテストします。 
 
 ポリシーの割り当てを削除して、今後の作業がブロックされないようにします。
 
-1. 「**すべてのサービス**」 ブレードで、「**ポリシー**」 を検索して選択し、「**許可されている場所**」 ポリシーをクリックします。
+1. **[すべてのサービス]** ブレードで、「**ポリシー**」を検索して選択し、**[許可されている場所]** ポリシーをクリックします。
 
-    **注**: 「**ポリシー**」 ブレードで、割り当てたさまざまなポリシーのコンプライアンス状態を表示することができます。
+    **注**: **[ポリシー]** ブレードで、割り当てたさまざまなポリシーのコンプライアンス状態を表示することができます。
 
-    **注**: 「許可されている場所」ポリシーに、正しくないリソースが表示される場合があります。それらはポリシーを割り当てる前に作成されたリソースです。
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The Allowed location policy may show non-compliant resources. If so, these are resources created prior to the policy assignment.
  
-2. 「**許可されている場所**」をクリックします。「許可されている場所のポリシー コンプライアンス」ウィンドウが開きます。
+2. **[許可されている場所]** をクリックします。[[許可されている場所] ポリシー コンプライアンス] ウィンドウが開きます。
 
-3. 上部メニューから「**割り当ての削除**」をクリックします。「**はい**」をクリックして、ポリシー割り当てを削除することを確認します
+3. **[すべてのサービス]** ブレードで、「**ポリシー**」を検索して選択し、**[作成]** セクションで **[定義]** をクリックします。
 
-   ![「割り当ての削除」メニュー項目のスクリーンショット。](../images/1407.png)
+   ![[割り当ての削除] メニュー項目のスクリーンショット。](../images/1407.png)
 
 4. 別のストレージ アカウントを作成して、ポリシーが無効になっていることを確認してください。
 
-    **注**: 「**許可されている場所**」 ポリシーが役立つ一般的なシナリオには以下のようなものがあります: 
-    - *コスト トラッキング*: リージョンの場所ごとに、サブスクリプションが異なる場合があります。このポリシーにより、すべてのリソースが対象のリージョンにデプロイされるようにし、コスト トラッキングを行うことができます。 
-    - *データ常駐とセキュリティ コンプライアンス*: データ常駐要件を設定し、顧客ごとまたは特定のワークロードごとにサブスクリプションを作成し、すべてのリソースを特定のデータセンターにデプロイしてデータとセキュリティのコンプライアンス要件を確保することを定義することもできます。
+    **注**: **[許可されている場所]** ポリシーが役立つ一般的なシナリオには、次のようなものがあります。 
+    - 組み込みのポリシー定義の一覧を確認します。 
+    - *データ常駐とセキュリティ コンプライアンス*:データ常駐要件を設定し、顧客ごとまたは特定のワークロードごとにサブスクリプションを作成し、すべてのリソースを特定のデータセンターにデプロイしてデータとセキュリティのコンプライアンス要件を確保することを定義することもできます。
 
-お疲れさまでした。Azure リソースの展開を特定のデータセンターに制限する Azure Policy を作成しました。
+たとえば、**[カテゴリ]** ドロップダウンでは、**[計算]** のみを選択します。
 
-**注**: 追加コストを回避するために、オプションでこのリソース グループを削除できます。リソース グループを検索し、リソース グループをクリックして、「**リソース グループの削除**」をクリックします。リソース グループの名前を確認し、「**削除**」をクリックします。**通知**を監視して、削除の進行状況を確認します。
+**[許可されている仮想マシン サイズ SKU]** の定義を使用すると、自分の組織がデプロイできる仮想マシン SKU のセットを指定できます。

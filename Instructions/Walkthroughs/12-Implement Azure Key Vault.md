@@ -1,62 +1,62 @@
 ---
 wts:
-    title: '12 - Azure Key Vault の実装 (5 分)'
-    module: 'モジュール 04: 一般的なセキュリティ機能およびネットワーク セキュリティ機能に関する説明'
+  title: 12 - Azure Key Vault の実装 (5 分)
+  module: 'Module 04: Describe general security and network security features'
 ---
-# 12 - Azure Key Vault の実装 (5 分)
+# <a name="12---implement-azure-key-vault-5-min"></a>12 - Azure Key Vault の実装 (5 分)
 
 このチュートリアルでは、Azure Key コンテナーを作成してキー コンテナー内にパスワード シークレットを作成し、アプリケーションで使用するために安全に保存され集中管理されたパスワードを提供します。
 
-# タスク 1: Azure Key Vault を作成する 
+# <a name="task-1-create-an-azure-key-vault"></a>タスク 1:Azure Key Vault を作成する 
 
-1. Azure portal　(`https://portal.azure.com`) にサインインします。
+1. [Azure portal](https://portal.azure.com) にサインインします。
 
-2. **「すべてのサービス」** ブレードで、**「キー コンテナー」** を検索して選択し、**「+ 追加、+ 新規、+ 作成」** を選択します。
+2. **[すべてのサービス]** ブレードで、「**キー コンテナー**」と検索してそれを選択し、**[+追加]、[+新規]、[+作成]** のいずれかを選択します。
 
-3. キー コンテナーを構成します (キー コンテナー名の **xxxx** は、名前がグローバルに一意になる文字と数字に置き換えます)。その他は既定値のままにします。
+3. Configure the key vault (replace <bpt id="p1">**</bpt>xxxx<ept id="p1">**</ept> in the name of the key vault with letters and digits such that the name is globally unique). Leave the defaults for everything else.
 
     | 設定 | 値 | 
     | --- | --- |
-    | サブスクリプション | **提供されている既定値を使用** |
-    | リソース グループ | **新しいリソース グループの作成** |
-    | Key Vault 名 | **keyvaulttestxxx** |
-    | 場所 | **米国東部** |
+    | サブスクリプション | **提供された既定値を使用する** |
+    | Resource group | **新しいリソース グループの作成** |
+    | キー コンテナー名 | **keyvaulttestxxx** |
+    | Location | **米国東部** |
     | 価格レベル | **Standard** |
     
-    一意の名前を見つけるには、**xxxx** を置き換えることに**注意してください**。
-4. 「**Review + create**」をクリックし、「**作成**」をクリックします。 
+    **注** **xxxx** を置き換えて、一意の名前を見つけます。
+4. **[確認と作成]** をクリックし、**[作成]** をクリックします。 
 
-5. 新しいキー コンテナーをプロビジョニングしたら、「**リソースに移動**」 をクリックします。新しいキー コンテナーを検索して見つけることもできます。 
+5. Once the new key vault is provisioned, click <bpt id="p1">**</bpt>Go to resource<ept id="p1">**</ept>. Or you can locate your new key vault by searching for it. 
 
-6. キー コンテナーの「**概要**」タブをクリックし、**コンテナーの URI** を書き留めます。REST API を介してコンテナーを使用するアプリケーションには、この URI が必要になります。
+6. Click on the key vault <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> tab and take note of the <bpt id="p2">**</bpt>Vault URI<ept id="p2">**</ept>. Applications that use your vault through the REST APIs will need this URI.
 
-7. その他のキー コンテナー オプションの一部を参照します。「**設定**」 で、「**キー**」、「**シークレット**」、「**証明書**」、「**アクセス ポリシー**」、「**ファイアウォールと仮想ネットワーク**」を確認します。
+7. Take a moment to browse through some of the other key vault options. Under <bpt id="p1">**</bpt>Settings<ept id="p1">**</ept> review <bpt id="p2">**</bpt>Keys<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Secrets<ept id="p3">**</ept>, <bpt id="p4">**</bpt>Certificates<ept id="p4">**</ept>, <bpt id="p5">**</bpt>Access Policies<ept id="p5">**</ept>, <bpt id="p6">**</bpt>Firewalls and virtual networks<ept id="p6">**</ept>.
 
-    **注**: Azure アカウントは、この新しい コンテナーで操作を実行できる唯一のアカウントです。「**設定**」セクションと「**アクセス ポリシー**」セクションで必要に応じて変更できます。
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your Azure account is the only one authorized to perform operations on this new vault. You can modify this if you wish in the <bpt id="p1">**</bpt>Settings<ept id="p1">**</ept> and then the <bpt id="p2">**</bpt>Access policies<ept id="p2">**</ept> section.
 
-# タスク 2: キー コンテナーにシークレットを追加する
+# <a name="task-2-add-a-secret-to-the-key-vault"></a>タスク 2:Key Vault にシークレットを追加する
         
 このタスクでは、キー コンテナーにパスワードを追加します。 
 
-1. 「**設定**」 で 「**シークレット**」 を選択してから、「**+ 生成/インポート**」 をクリックします。
+1. **[設定]** で **[シークレット]** を選択してから、**[+ 生成/インポート]** をクリックします。
 
-2. シークレットを構成します。その他の値はデフォルトのままにします。ライセンス認証と有効期限を設定できることを確認してください。シークレットを無効にすることもできます。
+2. Configure the secret. Leave the other values at their defaults. Notice you can set an activation and expiration date. Notice you can also disable the secret.
 
     | 設定 | 値 | 
     | --- | --- |
     | Upload options | **手動** |
-    | 名前 | **ExamplePassword** |
+    | Name | **ExamplePassword** |
     | 値 | **hVFkk96** |
 
-3. **作成**をクリックします。
+3. **Create** をクリックしてください。
 
-4. シークレットが正常に作成されたら、**ExamplePassword** をクリックし、状態が 「**有効**」 になっていることを確認します。
+4. シークレットが正常に作成されたら、**[ExamplePassword]** をクリックし、状態が **[有効]** になっていることを確認します。
 
-5. 作成したシークレットを選択し、**シークレット識別子**をメモします。これは、アプリケーションで使用できる URL 値です。一元管理され、安全に保存されたパスワードを提供します。 
+5. Select the secret you just created, note the the <bpt id="p1">**</bpt>Secret Identifier<ept id="p1">**</ept>. This is the url value that you can now use with applications. It provides a centrally managed and securely stored password. 
 
-6. 「**シークレット値の表示**」 ボタンをクリックすると、前に指定したパスワードが表示されます。
+6. **[シークレット値の表示]** ボタンをクリックすると、前に指定したパスワードが表示されます。
 
 
-お疲れさまでした。Azure Key コンテナーを作成し、キー コンテナー内にパスワード シークレットを作成し、アプリケーションで使用するための安全に保存された集中管理パスワードを提供します。
+キー コンテナーを構成します (キー コンテナー名の **xxxx** は、名前がグローバルに一意になる文字と数字に置き換えます)。
 
-**注**: 追加コストを回避するために、オプションでこのリソース グループを削除できます。リソース グループを検索し、リソース グループをクリックして、「**リソース グループの削除**」をクリックします。リソース グループの名前を確認し、「**削除**」をクリックします。**通知**を監視して、削除の進行状況を確認します。
+その他は既定値のままにします。

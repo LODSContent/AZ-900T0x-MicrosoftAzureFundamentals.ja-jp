@@ -1,58 +1,58 @@
 ---
 wts:
-    title: '22 - サポート リクエストを開く (5 分)'
-    module: '現行のテストでは使用しません'
+  title: 22 - サポート リクエストを開く (5 分)
+  module: Not currently utilized in current exam
 ---
-# 22 - サポート リクエストを開く (5 分)
+# <a name="22---open-a-support-request-5-min"></a>22 - サポート リクエストを開く (5 分)
 
 このチュートリアルでは、使用可能なサポート プラン オプションを表示し、新しいサポート リクエストの作成と確認を練習します。
 
-# タスク 1: 使用可能なサポート 計画オプションとテクニカル サポート リクエストをを表示する
+# <a name="task-1-view-available-support-plan-options-and-a-technical-support-request"></a>タスク 1:使用可能なサポート 計画オプションとテクニカル サポート リクエストをを表示する
 
-1. [**Azure portal**](https://portal.azure.com) にサインインします。
+1. [**Azure Portal**](https://portal.azure.com) にサインインします。
 
-2. **「すべてのサービス」** ブレードで、**「ヘルプ + サポート」** を検索して選択し、**「サポート プラン」** を選択します。
+2. **[すべてのサービス]** ブレードで、 **[ヘルプ + サポート]** を検索して選択し、 **[サポート プラン]** を選択します。
 
-3. さまざまなサポート プランを確認するには、数分かかります。**基本**プランに含まれる内容を確認します。 
+3. Take a few minutes to review the different support plans. Notice what is included in the <bpt id="p1">**</bpt>Basic<ept id="p1">**</ept> plan. 
 
-4. **「+ 新規サポート リクエスト」** をクリックします。指定した値に基づいて、チケットが作成されます。 
+4. Click <bpt id="p1">**</bpt>+ New support request<ept id="p1">**</ept>. The ticket is created based on the values you specify. 
 
     | 設定 | 値|
     |----|--------|
-    | 問題の種類| **技術** |
+    | 問題の種類| **テクニカル** |
     | サブスクリプション | **サブスクリプションを選択する** |
     | サービス | **すべてのサービス**、**Linux を実行している仮想マシン** |
-    | 概要 | **大きなファイルの場合、ディスク アクセスは非常に遅くなります。** |
-    | 問題の種類 | **VM のパフォーマンス** |
+    | まとめ | **ファイルのサイズが大きいとディスク アクセスが非常に低速になる** |
+    | 問題の種類 | **[VM performance]\(VM のパフォーマンス\)** |
     | 問題のサブタイプ | **ディスクのスループットが予想より遅い** |    
     | | |
 
-5. 「**次へ: ソリューション >>**」 を参照し、推奨されるソリューションについて読みます。
+5. **[次へ: ソリューション >>]** をクリックし、推奨される解決策に一通り目を通します。
 
-6. **「次へ: 詳細 >>** 実際のサポート リクエストを提出する場合は、問題を迅速に解決することができるよう、できるだけ多くの情報を入力してください。このページの連絡先の選択肢は、サポート プランによって異なります。 
+6. Click <bpt id="p1">**</bpt>Next: Details &gt;&gt;<ept id="p1">**</ept>. When submitting an actual support request, you would provide as much information as possible to allow for a speedy resolution of the issue. Your contact choices on this page depend on your support plan. 
 
-    **注:** この時点で停止します。技術的な要求を送信する方法がわかりましたか。
+    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will stop at this point. Do you understand how to submit a technical request?
 
-# タスク 2: 請求サポート リクエストを作成する
+# <a name="task-2-create-a-billing-support-request"></a>タスク 2:請求サポート リクエストを作成する
 
-1. 「**新しいサポート リクエスト**」 セクションの 「**基本**」 タブに戻ります。 
+1. **[新しいサポート リクエスト]** セクションの **[基本]** タブに戻ります。 
 
     | 設定 | 値|
     |----|--------|
-    | 問題の種類| **課金** |
+    | 問題の種類| **Billing** |
     | サブスクリプション | **サブスクリプションを選択する** |
-    | 概要 | **月額料金が正しくありません。** |
-    | 問題の種類 | **価格** |
-    | 問題のサブタイプ | **サービス価格を知るにはどうしたらよいですか** |    
+    | まとめ | **月額料金が正しくない** |
+    | 問題の種類 | **料金** |
+    | 問題のサブタイプ | **[Help me discover the service prices]\(サービスの価格を確認する方法\)** |    
 
-2. 「**次へ: ソリューション**」 を参照し、推奨されるソリューションについて読みます。
+2. **[次へ: ソリューション]** をクリックし、推奨される解決策に一通り目を通します。
 
-3. 「**次へ: 詳細**」 実際のサポート リクエストを提出する場合は、問題を迅速に解決することができるよう、できるだけ多くの情報を入力してください。 
+3. Click <bpt id="p1">**</bpt>Next: Details<ept id="p1">**</ept>.  When submitting a real support request you would provide as much information as possible to allow for a speedy resolution of the issue. 
 
-    **注:** この時点で停止します。サポート リクエストを送信する方法がわかりましたか。
+    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will STOP at this point. Do you understand how to submit a support request?
 
-4. 「**すべてのサポート リクエスト**」 をクリックします。ここで、サポート リクエストが表示されます。サポート リクエストの詳細を記載したメールがメール アドレスにも送信されます。
+4. Click <bpt id="p1">**</bpt>All support requests<ept id="p1">**</ept>. This is where your support requests are shown. An email is also sent to your email address containing details of the support request.
 
-成功しました。使用可能なサポート プラン オプションを表示し、新しいサポート リクエストの作成と確認を練習しました。
+さまざまなサポート プランを確認するには、数分かかります。
 
-**注**: クリックして [**Azure サポート チケットの作成**](https://azure.microsoft.com/ja-jp/support/create-ticket) に関する詳細をご覧ください。
+**注**:クリックして [**Azure サポート チケットの作成**](https://azure.microsoft.com/en-us/support/create-ticket) に関する詳細を確認してください。

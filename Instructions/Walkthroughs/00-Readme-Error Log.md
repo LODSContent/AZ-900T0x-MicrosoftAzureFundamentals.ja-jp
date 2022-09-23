@@ -1,5 +1,5 @@
 ---
 wts:
-    title: '00 - リードミー - エラー ログ'
-    module: 'モジュール 00 - コースの概要'
+  title: 00 - Readme - エラー ログ
+  module: Module 00 - Course Introduction
 ---

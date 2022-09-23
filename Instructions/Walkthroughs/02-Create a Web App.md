@@ -1,66 +1,66 @@
 ---
 wts:
-    title: '02 - Web アプリの作成 (10 分)'
-    module: 'モジュール 02 - Azure のコア サービス (ワークロード)'
+  title: 02 - Web アプリの作成 (10 分)
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 02 - Web アプリの作成 (10 分)
+# <a name="02---create-a-web-app-10-min"></a>02 - Web アプリの作成 (10 分)
 
-このチュートリアルでは、Docker コンテナーを実行する Web アプリを作成します。Dockerコ ンテナにはウェルカム メッセージが含まれています。 
+In this walkthrough, we will create a web app that runs a Docker container. The Docker container contains a Welcome message. 
 
-Azure App Service は、実際には 4 つのサービスのコレクションであり、そのすべてが Web アプリケーションのホストと実行を支援するために構築されています。4 つのサービス (Web アプリ、モバイル アプリ、API アプリ、ロジック アプリ) は外観が異なりますが、最終的にはすべて非常によく似た方法で動作します。Web アプリは 4 つのサービスの中で最も一般的に使用されており、このサービスはこのラボで使用するサービスです。
+Azure App Service are actually a collection of four services, all of which are built to help you host and run web applications. The four services (Web Apps, Mobile Apps, API Apps, and Logic Apps) look different, but in the end they all operate in very similar ways. Web Apps are the most commonly used of the four services, and this is the service that we will be using in this lab.
 
-# タスク 1: Web アプリを作成する 
+# <a name="task-1-create-a-web-app"></a>タスク 1:Web アプリを作成する 
 
 このタスクでは、Azure App Service Web App を作成します。 
 
-1. Azure portal　(`https://portal.azure.com`) にサインインします。 
+1. [Azure ポータル](http://portal.azure.com/)にサインインします。 
 
-2. 「**すべてのサービス**」ブレードで「**App Services**」を検索して選択し、**「+ 追加」、「+ 作成」、「+ 新規」** のいずれかをクリックします。
+2. **[すべてのサービス]** ブレードで「**App Services**」を検索して選択し、**[+ 追加]、[+ 作成]、[+ 新規]** のいずれかをクリックします。
 
-3. 「**Web アプリ**」 ブレードの「**基本**」タブで次の設定を指定します (Web アプリの名前の **xxxx** は、名前がグローバルに一意になるように文字と数字に置き換えます)。App Service プランを含む、その他すべての既定値をそのまま使用します。 
+3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Web App<ept id="p2">**</ept> blade, specify the following settings (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the web app with letters and digits such that the name is globally unique). Leave the defaults for everything else, including the App Service Plan. 
 
     | 設定 | 値 |
     | -- | -- |
-    | サブスクリプション | **提供されている既定値を使用** |
+    | サブスクリプション | **提供された既定値を使用する** |
     | リソース グループ | **新しいリソース グループの作成**|
-    | 名前 | **myDockerWebAppxxxx** |
-    | 公開 | **Docker コンテナー** |
+    | Name | **myDockerWebAppxxxx** |
+    | 発行 | **Docker コンテナー** |
     | オペレーティング システム | **Linux** |
     | リージョン | **米国東部** |
     
-    **注:** Web アプリの名前が一意になるように **xxxx** を変更してください。
+    **注:**  **xxxx** を変更して、Web アプリ名が一意になるようにしてください。
 
-4. **「次へ」 > 「Docker」** をクリックし、コンテナー情報を構成します。  
+4. **[次へ]、[Docker]** の順にクリックし、コンテナー情報を構成します。  
 
     | 設定 | 値 |
     | -- | -- |
-    | オプション | **単一コンテナ** |
+    | オプション | **[単一コンテナー]** |
     | イメージのソース | **Docker Hub** |
-    | アクセスの種類 | **パブリック** |
-    | 画像とタグ | **mcr.microsoft.com/azuredocs/aci-helloworld** |
+    | アクセスの種類 | **Public** |
+    | [Image and tag](イメージとタグ) | **mcr.microsoft.com/azuredocs/aci-helloworld** |
     
- **注:** startup コマンドはオプションで、この演習では必要ありません。
+ **注:**  startup コマンドはオプションで、この演習では必要ありません。
 
-5. 「**確認および作成**」 をクリックし、「**作成**」 をクリックします。 
+5. **[確認と作成]** をクリックし、**[作成]** をクリックします。 
 
-# タスク 2: Web アプリをテストする
+# <a name="task-2-test-the-web-app"></a>タスク 2:Web アプリをテストする
 
 このタスクでは、Web アプリをテストします。
 
 1. Web アプリがデプロイされるのを待ちます。
 
-2. 「**通知**」 の 「**リソースに移動**」 をクリックします。 
+2. **[通知]** の **[リソースに移動]** をクリックします。 
 
-3. 「**概要**」ブレードで **URL** を探します。URL をクリップボードにコピーします。
+3. このチュートリアルでは、Docker コンテナーを実行する Web アプリを作成します。
 
-    ![Web アプリのプロパティ ブレードのスクリーンショット。URL が強調表示されます。](../images/0801.png)
+    ![Docker コンテナにウェルカム メッセージが含まれます。](../images/0801.png)
 
-4. 新しいブラウザー ウィンドウでき、URl を貼り付けて、Enter キーを押します。Azure Container Instance へようこそ! ウェルカム メッセージが表示されます。
+4. In a new browser window, paste the URl and press enter. The Welcome to Azure Container Instances! welcome message will be displayed.
 
     ![Azure Container Instance ページへようこそのスクリーンショット。](../images/0802.png)
 
-5. Web アプリの「**概要**」ブレードに戻り、下にスクロールします。データの入出力と要求を追跡するいくつかのグラフに気付くでしょう。手順 4 を数回繰り返す場合は、対応する製品利用統計情報がグラフに表示されます。これには、要求数と平均応答時間が含まれます。 
+5. Azure App Service は、実際には 4 つのサービスのコレクションであり、そのすべてが Web アプリケーションのホストと実行を支援するために構築されています。 
 
-**注**: 追加コストを回避するために、オプションでこのリソース グループを削除できます。リソース グループを検索し、リソース グループをクリックして、「**リソース グループの削除**」をクリックします。リソース グループの名前を確認し、「**削除**」をクリックします。**通知**を監視して、削除の進行状況を確認します。
+4 つのサービス (Web アプリ、モバイル アプリ、API アプリ、ロジック アプリ) は外観が異なりますが、最終的にはすべて非常によく似た方法で動作します。
 
 これで、Azure App Service を作成しました。

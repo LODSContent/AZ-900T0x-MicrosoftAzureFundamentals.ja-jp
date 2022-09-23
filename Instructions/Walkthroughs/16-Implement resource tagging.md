@@ -1,100 +1,100 @@
 ---
 wts:
-    title: '16 - リソースのタグ付けを実装する (5 分)'
-    module: 'モジュール 05: ID、ガバナンス、プライバシー、およびコンプライアンス機能に関する説明'
+  title: 16 – リソースのタグ付けを実装する (5 分)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
 ---
-# 16 - リソースのタグ付けを実装する
+# <a name="16---implement-resource-tagging-5-min"></a>16 – リソースのタグ付けを実装する (5 分)
 
 このチュートリアルでは、タグ付けが必要なポリシー割り当てを作成し、ストレージ アカウントを作成してタグ付けをテストし、指定したタグを持つリソースを表示し、タグ付けポリシーを削除します。
 
-# タスク 1: ポリシー割り当てを作成する 
+# <a name="task-1-create-a-policy-assignment"></a>タスク 1:ポリシー割り当てを作成する 
 
-このタスクでは、「**リソースでタグを必須にする**」 ポリシーを構成して、そのポリシーにサブスクリプションを割り当てます。 
+このタスクでは、**[リソースでタグを必須にする]** ポリシーを構成して、そのポリシーをサブスクリプションに割り当てます。 
 
 1. [Azure portal](https://portal.azure.com) にサインインします。
 
-2. 「**すべてのサービス**」 ブレードで、「**ポリシー**」 を検索して選択します。
+2. **[すべてのサービス]** ブレードで、「**ポリシー**」を検索して選択します。
 
-3. 「**作成**」 セクションにスクロールして 「**割り当て**」 をクリックし、ページ上部の 「**ポリシーの割り当て**」 をクリックします。
+3. **[作成]** セクションにスクロールして **[割り当て]** をクリックし、ページの上部から **[ポリシーの割り当て]** をクリックします。
 
 4. ポリシーの**範囲**はサブスクリプション全体になります。 
 
-5. 「**基本**」 で、（テキスト ボックス右側にある）「**ポリシー定義**」省略記号ボタンを選択します。 「**検索**」 ボックスに 「**tag**」 と入力します。 「**tag**」 という文字が含まれる関連ポリシーの一覧が表示されます。「**リソースでタグを必須にする**」定義が現れるまで下にスクロールし、見つかったらそれをクリックして、「**選択**」をクリックします。
+5. Under <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> Select the <bpt id="p2">**</bpt>Policy definition<ept id="p2">**</ept> ellipsis button (right side of textbox). In the <bpt id="p1">**</bpt>Search<ept id="p1">**</ept> box, enter the value <bpt id="p2">**</bpt>tag<ept id="p2">**</ept>. A list of related Policies with the word <bpt id="p1">**</bpt>tag<ept id="p1">**</ept> will appear. Scroll down till you find the <bpt id="p1">**</bpt>Require a tag and its value on resources<ept id="p1">**</ept> definition, click on it and click <bpt id="p2">**</bpt>Select<ept id="p2">**</ept>.
 
-   ![「リソースでタグを必須にする」が選択された「利用可能な定義」ペインのスクリーンショット。](../images/1701.png)
+   ![image](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  「**パラメーター**」タブに、タグ キー/値のペア名として、「**会社: Contoso**」と入力します。「**確認および作成**」をクリックし、「**作成**」をクリックします。
+6.  On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, type in **Company : Contoso ** for the tag key/value pair name. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 
-    ![タグ名が入力された「ポリシーの割り当て」ウィンドウのスクリーンショット。](../images/1702.png)
+  
 
-7. 「**リソースでタグが必要**」ポリシーの割り当てが適用されました。リソースが作成されたら、「会社: Contoso」キーを持つタグを含める必要があります。
-   **注 - ポリシーが適用されるまで最大 30 分待つ必要があります。** 
+7. The <bpt id="p1">**</bpt>Require a tag amd its value on resources<ept id="p1">**</ept> policy assignment is now in place. When a resource is created, it must include a tag with the Company : Contoso key.
+   <bpt id="p1">**</bpt>Note - you need to wait up to 30 minutes for the Policy to be applied.<ept id="p1">**</ept> 
 
-   ![許可された場所の割り当てが強調表示された「ポリシー - 割り当て」ペインのスクリーンショット](../images/1703.png)
+  ![image](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
-# タスク 2: ストレージアカウントを作成して、必要なタグ付けをテストする
+# <a name="task-2-create-a-storage-account-to-test-the-required-tagging"></a>タスク 2:ストレージアカウントを作成して、必要なタグ付けをテストする
 
 このタスクでは、ストレージ アカウントを作成して、必要なタグ付けをテストします。 
 
-1. Azure Portal の「**すべてのサービス**」ブレードで、「**ストレージ アカウント**」を検索して選択し、**「+ 追加」、「+ 作成」、「+ 新規」** をクリックします。
+1. Azure portal の **[すべてのサービス]** ブレードで、「**ストレージ アカウント**」を検索して選択し、**[+ 追加]、[+ 新規]、[+ 作成]** のいずれかをクリックします。
 
-2. 「**ストレージ アカウントの作成**」 ブレードの 「**基本**」 タブで次の情報を入力します (ストレージ アカウントの名前の **xxxx** は、名前がグローバルに一意になるように文字と数字に置き換えます)。その他は既定値のままにします。
+2. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
 
     | 設定 | 値 | 
     | --- | --- |
-    | サブスクリプション | **提供されている既定値を使用** |
-    | リソース グループ | **新しいリソース グループの作成** |
+    | サブスクリプション | **提供される既定値を使用する** |
+    | Resource group | **新しいリソース グループの作成** |
     | ストレージ アカウント名 | **storageaccountxxxx** |
     | 場所 | **(米国) 米国東部** |
 
-3. 「**確認および作成**」をクリックします。 
+3. **[Review + create](レビュー + 作成)** をクリックします。 
 
-    **注:** タグが提供されない場合に何が起こるかをテストします。ポリシーが有効になるまで最大 30 分かかる場合があることに注意してください。
+    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We are testing to see what happens when the tag is not supplied. Please note, it can take up to 30 minutes for Policies to take effect.
 
-4. 次の確認失敗メッセージが表示されます。 「**ここをクリックして詳細を表示**」 メッセージをクリックします。 「**エラー**」 ブレードの 「**概要**」 タブで、ポリシーによりリソースが許可されていないことを示すエラー メッセージを書き留めます。
+4. You will receive a Validation failed message. Click the <bpt id="p1">**</bpt>Click here to view details<ept id="p1">**</ept> message. On the <bpt id="p1">**</bpt>Errors<ept id="p1">**</ept> blade, on the <bpt id="p2">**</bpt>Summary<ept id="p2">**</ept> tab note the error message stating that resource was disallowed by Policy.
 
-    **注記:** 「未処理エラー」タブを表示すると、必要な特定のタグ名が表示されます。 
+    **注:** [未処理エラー] タブを表示すると、必要な特定のタグ名が表示されます。 
 
     ![ポリシー エラーのために許可されていない所を示すスクリーンショット。](../images/1704.png)
 
 
-5. 「**エラー**」ペインを閉じ、画面の下部にある 「**前へ**」 をクリックします。タグ付け情報を入力します。 
+5. Close the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> pane and click <bpt id="p2">**</bpt>Previous<ept id="p2">**</ept> (bottom of the screen). Provide the tagging information. 
 
     | 設定 | 値 | 
     | --- | --- |
-    | タグ名 | **Company:Contoso** (ドロップダウン リストに表示されない場合があります) |
+    | タグ名 | **Company:Contoso** (ドロップダウン リストにない可能性があります) |
 
-6. 「**確認および作成**」 をクリックし、検証が成功したことを確認します。 「**作成**」 をクリックしてストレージ アカウントをデプロイします。 
+6. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and verify that the validation was successful. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to deploy the storage account. 
 
-# タスク 3: 特定のタグを持つすべてのリソースを表示します
+# <a name="task-3-view-all-resources-with-a-specific-tag"></a>タスク 3:特定のタグを持つすべてのリソースを表示します
 
-1. Azure Portal の 「**すべてのサービス**」 ブレードで、「**タグ**」 を検索して選択します。
+1. Azure Portal の **[すべてのサービス]** ブレードで、「**タグ**」を検索して選択します。
 
-2. すべてのタグとその値を書き留めます。「**Company : Contoso**」キー/値のペアをクリックします。これにより、デプロイにおいてタグが含まれていれば、新しく作成したストレージ アカウントを示すブレードが表示されます。 
+2. Note all tags and their values. Click the <bpt id="p1">**</bpt>Company : Contoso<ept id="p1">**</ept> key/value pair. This will display a blade showing the newly created storage account, as long as you included the tag during its deployment. 
 
    ![Company と Contoso が選択されたタグのスクリーンショット。](../images/1705.png)
 
-3. ポータルで、「**すべてのリソース**」ブレードを表示します。
+3. ポータルで、**[すべてのリソース]** ブレードを表示します。
 
-4. 「**フィルターの追加**」をクリックし、フィルターのカテゴリとして **Company** タグ キーを追加します。フィルターが適用されると、自分のストレージ アカウントのみがリストされます。
+4. Click <bpt id="p1">**</bpt>Add filter<ept id="p1">**</ept> and add the <bpt id="p2">**</bpt>Company<ept id="p2">**</ept> tag key as the filter category. With the filter applied, only your storage account will be listed.
 
-    ![「Company」が選択された「すべてのリソース」フィルターのスクリーンショット。](../images/1706.png)
+    ![[Company] が選択されている [すべてのリソース] フィルターのスクリーンショット。](../images/1706.png)
 
-# タスク 4: ポリシーの割り当てを削除する
+# <a name="task-4-delete-the-policy-assignment"></a>タスク 4:ポリシーの割り当てを削除する
 
-このタスクでは、「**リソースでタグを必須にする**」ポリシーを削除して、今後の作業に影響が及ばないようにします。 
+このタスクでは、**[リソースでタグを必須にする]** ポリシーを削除して、今後の作業に影響が及ばないようにします。 
 
-1. ポータルの「**すべてのサービス**」 ブレードで、「**ポリシー**」 を検索して選択します。
+1. ポータルの **[すべてのサービス]** ブレードで、「**ポリシー**」を検索して選択します。
 
-2. 「**リソースでタグを必須にする**」 ポリシー エントリをクリックします。
+2. **[リソースでタグを必須にする]** ポリシー エントリをクリックします。
 
-3. 上部メニューから 「**割り当ての削除**」 をクリックします。
+3. 上部のメニューから **[割り当ての削除]** をクリックします。
 
-4. 「**はい**」 をクリックして、「**割り当ての削除**」 ダイアログでポリシー割り当てを削除できることを確認します。
+4. **[はい]** をクリックして、**[割り当ての削除]** ダイアログでポリシー割り当ての削除を確定します
 
 5. 時間があれば、タグなしで別のリソースを作成し、ポリシーが適用されていないことを確認してください。
 
-お疲れさまでした! このチュートリアルでは、タグ付けが必要なポリシー割り当てを作成し、リソース (ストレージ アカウント) を作成して、タグ付けのポリシーをテストし、指定されたタグでリソースを表示し、タグ付けポリシーを削除しました。
+**[基本]** で、**[ポリシー定義]** 省略記号ボタン (テキストボックスの右側にあります) を選択します。
 
 
-**注**: 追加コストを回避するために、オプションでこのリソース グループを削除できます。リソース グループを検索し、リソース グループをクリックして、「**リソース グループの削除**」をクリックします。リソース グループの名前を確認し、「**削除**」をクリックします。**通知**を監視して、削除の進行状況を確認します。
+**[検索]** ボックスに、「**tag**」と入力します。
