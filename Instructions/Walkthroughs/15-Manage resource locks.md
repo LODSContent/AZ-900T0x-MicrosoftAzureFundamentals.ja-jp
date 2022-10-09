@@ -5,7 +5,7 @@ wts:
 ---
 # <a name="15---manage-resource-locks-5-min"></a>15 - リソース ロックの管理 (5 分)
 
-In this walkthrough, we will add a lock to the resource group and test deleting the resource group. Locks can be applied in a subscription to resource groups, or individual resources to prevent accidental deletion or modification of critical resources.  
+このチュートリアルでは、リソース グループにロックをかけた後、リソース グループを削除できるかテストします。 サブスクリプションにおいては、リソース グループ、または個々のリソースにロックをかけることで、重要なリソースが誤って削除または変更されるのを防ぐことができます。  
 
 
 # <a name="task-1--add-a-lock-to-the-resource-group-and-test-deletion"></a>タスク 1:リソース グループにロックを追加し、削除をテストする
@@ -22,7 +22,7 @@ In this walkthrough, we will add a lock to the resource group and test deleting 
 
     ![[ロック] ウィンドウが表示されている myRGLocks リソース グループのスクリーンショット。](../images/1601.png)
 
-5. Configure the new lock. When you are done click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>. 
+5. 新しいロックを構成します。 完了したら、**[OK]** をクリックします。 
 
     | 設定 | 値 |
     | -- | -- |
@@ -30,7 +30,7 @@ In this walkthrough, we will add a lock to the resource group and test deleting 
     | ロックの種類 | **削除** |
     | | |
 
-6. Click <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> and click <bpt id="p2">**</bpt>Delete resource group<ept id="p2">**</ept>. Type the name of the resource group and click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>. You receive an error message stating the resource group is locked and can't be deleted.
+6. **[概要]** をクリックし、**[リソース グループの削除]** をクリックします。 リソース グループの名前を入力し、**[OK]** をクリックします。 リソース グループがロックされ、削除できないことを示すエラー メッセージが表示されます。
 
     ![削除ロックに失敗したスクリーンショット。](../images/1602.png)
 
@@ -40,7 +40,7 @@ In this walkthrough, we will add a lock to the resource group and test deleting 
 
 1. **[すべてのサービス]** ブレードで「**ストレージ アカウント**」を検索して選択し、**[+ 追加]、[+ 作成]、[+ 新規]** のいずれかをクリックします。 
 
-2. このチュートリアルでは、リソース グループにロックをかけた後、リソース グループを削除できるかテストします。
+2. **[ストレージ アカウント]** ページの **[+追加]、[+作成]、[+新規]** のいずれかのブレードで、次の情報を入力します (ストレージ アカウントの名前の **xxxx** は、名前がグローバルに一意になるように文字と数字に置き換えます)。 その他は既定値のままにします。
 
     | 設定 | 値 | 
     | --- | --- |
@@ -56,15 +56,15 @@ In this walkthrough, we will add a lock to the resource group and test deleting 
 
 3. **[確認と作成]** をクリックして、ストレージ アカウントの設定を確認し、Azure が構成を検証できるようにします。 
 
-4. サブスクリプションにおいては、リソース グループ、または個々のリソースにロックをかけることで、重要なリソースが誤って削除または変更されるのを防ぐことができます。 
+4. 検証できたら、**[作成]** をクリックします。 アカウントが正常に作成されたことを示す通知を待ちます。 
 
 5.  ストレージ アカウントが正常に作成されたことを示す通知を待ちます。 
 
-6. Access your new storage account and from the <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> pane, click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>. You receive an error message stating the resource or its parent has a delete lock. 
+6. 新しいストレージ アカウントにアクセスし、**[概要]** ウィンドウで **[削除]** をクリックします。 リソースまたは親に削除ロックが設定されたことを示すエラー メッセージが表示されます。 
 
     ![ストレージ アカウントの削除中にエラーが発生した場合のスクリーンショット。](../images/1603.png)
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Although we did not create a lock specifically for the storage account, we did create a lock at the resource group level, which contains the storage account. As such, this <bpt id="p1">*</bpt>parent<ept id="p1">*</ept> level lock prevents us from deleting the resource and the storage account inherits the lock from the parent.
+    **注**:ストレージ アカウント専用のロックは作成しませんでしたが、ストレージ アカウントを含むリソース グループ レベルでロックを作成しました。 このように、この*親*レベルのロックによりリソースを削除できなくなり、ストレージ アカウントは親からロックを継承します。
 
 # <a name="task-3-remove-the-resource-lock"></a>タスク 3:リソース ロックを解除する
 
@@ -78,6 +78,6 @@ In this walkthrough, we will add a lock to the resource group and test deleting 
 
 3. ストレージ アカウント ブレードに戻り、リソースを削除できるようになったことを確認します。
 
-Congratulations! You created a resource group, added a lock to resource group and tested deletion, tested deleting a resource in the resource group, and removed the resource lock. 
+おめでとうございます! リソース グループを作成し、リソース グループにロックを追加して削除をテストし、リソース グループ内のリソースの削除をテストし、リソース ロックを削除しました。 
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

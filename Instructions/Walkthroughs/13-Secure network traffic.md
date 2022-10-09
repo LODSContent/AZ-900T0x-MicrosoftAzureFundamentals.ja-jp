@@ -43,15 +43,15 @@ wts:
 
 6. その他の既定値はそのままにして、ページの下部にある **[確認および作成]** ボタンをクリックします。
 
-7. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take about five minutes to deploy the virtual machine.
+7. 検証できたら、**[作成]** ボタンをクリックします。 仮想マシンのデプロイには約 5 分かかる場合があります。
 
-8. Monitor the deployment. It may take a few minutes for the resource group and virtual machine to be created. 
+8. 展開を監視します。 リソース グループと仮想マシンが作成されるまでに数分かかる場合があります。 
 
 9. デプロイ ブレードまたは通知領域から、 **[リソースに移動]** をクリックします。 
 
 10. **[SimpleWinVM]** 仮想マシンブレードで **[ネットワーク]** をクリックし、 **[受信ポート規則]** タブを確認します。仮想マシンのネットワーク インターフェイスまたはネットワーク インターフェイスが接続されているサブネットに、ネットワーク セキュリティ グループが関連付けられていないことを確認してください。
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Identify the name of the network interface. You will need it in the next task.
+    **注**:ネットワーク インターフェイスの名前を特定します。 この名前は、次のタスクで必要になります。
 
 # <a name="task-2-create-a-network-security-group"></a>タスク 2:ネットワーク セキュリティ グループを作成する
 
@@ -84,14 +84,14 @@ wts:
 
 2. **[概要]** ウィンドウで、 **[接続]** をクリックします。
 
-3. Attempt to connect to the virtual machine by selecting RDP and downloading an running the RDP file. By default the network security group does not allow RDP. Close the error window. 
+3. RDP を選択し、実行中の RDP ファイルをダウンロードして、仮想マシンへの接続を試みます。 既定では、ネットワーク セキュリティ グループで RDP は許可されていません。 エラー ウィンドウを閉じます。 
 
 
     ![仮想マシン接続が失敗したことを示すエラー メッセージのスクリーンショット。](../images/1201.png)
 
 4. 仮想マシンのブレードで **[設定]** セクションまでスクロールし、 **[ネットワーク]** をクリックして、ネットワーク セキュリティ グループ **[myNSGSecure (ネットワーク インターフェイスに接続: myVMNic)]** の受信規則で、仮想ネットワーク内のトラフィックとロードバランサー プローブを除くすべての受信トラフィックを拒否していることを確認します。
 
-5. On the <bpt id="p1">**</bpt>Inbound port rules<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add inbound port rule<ept id="p2">**</ept> . Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are done. 
+5. **[受信ポート規則]** タブで、 **[受信ポート規則の追加]** をクリックします。 選択したら、**[追加]** をクリックします。 
 
     | 設定 | 値 |
     | -- | -- |
@@ -104,7 +104,7 @@ wts:
     | Priority | **300** |
     | Name | **AllowRDP** |
 
-6. Select <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> and wait for the rule to be provisioned and then try again to RDP into the virtual machine by going back to <bpt id="p2">**</bpt>Connect<ept id="p2">**</ept> This time you should be successful. Remember the user is <bpt id="p1">**</bpt>azureuser<ept id="p1">**</ept> and the password is <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>.
+6. **[追加]** を選択し、ルールがプロビジョニングされるのを待ってから、**[接続]** に戻って仮想マシンへの RDP を再試行します。今回は成功するはずです。 ユーザーは "**azureuser**" で、パスワードは "**Pa$$w0rd1234**" です。
 
 # <a name="task-4-configure-an-outbound-security-port-rule-to-deny-internet-access"></a>タスク 4:インターネット アクセスを拒否するように送信セキュリティ ポートの規則を構成する
 
@@ -114,7 +114,7 @@ wts:
 
 2. コンピューターが起動したら、**Internet Explorer** ブラウザーを開きます。 
 
-3. Verify that you can access <bpt id="p1">**</bpt><ph id="ph1">https://www.bing.com</ph><ept id="p1">**</ept> and then close Internet Explorer. You will need to work through the IE enhanced security pop-ups. 
+3. **https://www.bing.com** にアクセスできることを確認してから、Internet Explorer を閉じます。 IE の強化されたセキュリティ ポップアップを操作する必要があります。 
 
     **注**:送信インターネット アクセスを拒否するルールを構成します。 
 
@@ -122,9 +122,9 @@ wts:
 
 5. **[設定]** で **[ネットワーク]** をクリックし、 **[送信ポートの規則]** をクリックします。
 
-6. Notice there is a rule, <bpt id="p1">**</bpt>AllowInternetOutbound<ept id="p1">**</ept>. This a default rule and cannot be removed. 
+6. **[インターネットへの送信を許可する]** という規則があることを確認します。 これは既定の規則であり、削除できません。 
 
-7. Click <bpt id="p1">**</bpt>Add outbound port rule<ept id="p1">**</ept> to the right of the <bpt id="p2">**</bpt>myNSGSecure  (attached to network interface: myVMNic)<ept id="p2">**</ept> network security group and configure a new outbound security rule with a higher priority that will deny internet traffic. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are finished. 
+7. ネットワークセキュリティグループ **[myNSGSecure (ネットワーク インターフェイスに接続: myVMNic)]** の右側にある **[出力ポート規則の追加]** をクリックし、より優先度の高い、インターネット トラフィックを拒否する新しい出力セキュリティ規則を構成します。 完了したら、 **[追加]** をクリックします。 
 
     | 設定 | 値 |
     | -- | -- |
@@ -140,6 +140,6 @@ wts:
 
 8. **[追加]** をクリックして、RDP の VM に戻ります。 
 
-9. Browse to <bpt id="p1">**</bpt><ph id="ph1">https://www.microsoft.com</ph><ept id="p1">**</ept>. The page should not display. You may need to work through additional IE enhanced security pop-ups.  
+9. **https://www.microsoft.com** にアクセスします。 ページは表示されません。 IE の強化されたセキュリティ ポップアップを操作することが必要になる場合があります。  
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

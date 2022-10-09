@@ -33,7 +33,7 @@ wts:
 
 5. リソースが作成されたことを示す通知を待ちます。
 
-6. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, navigate back to the <bpt id="p1">**</bpt>Function App<ept id="p1">**</ept> blade, click <bpt id="p2">**</bpt>Refresh<ept id="p2">**</ept> and verify that the newly created function app has the <bpt id="p3">**</bpt>Running<ept id="p3">**</ept> status. 
+6. デプロイが完了したら、デプロイ ブレードで [リソースに移動] をクリックします。 または、**[関数アプリ]** ブレードに戻り、**[最新の情報に更新]** をクリックして、新しく作成した関数アプリの状態が **[実行中]** であることを確認します。 
 
     ![新しい関数アプリの [関数アプリ] ページのスクリーンショット。](../images/0701.png)
 
@@ -45,25 +45,25 @@ wts:
 
 2. [関数アプリ] ブレードの **[関数]** セクションで、**[関数]** をクリックしてから、**[+ 追加]、[+ 作成]、[+ 新規]** をクリックします。
 
-    ![Screenshot of the choose a development environment step in the azure functions for dot net getting started pane inside Azure portal. The display elements for creating a new in-portal function are highlighted. The highlighted elements are expand the function app, add new function, in-portal, and the continue button.](../images/0702.png)
+    ![Azure portal 内の .NET 向け Azure Functions の [はじめに] ペインに表示される [開発環境を選択する] 手順のスクリーンショット。 新しいポータル内関数を作成するための表示要素が強調表示されます。 強調表示される要素は、関数アプリの展開、新しい関数の追加、ポータル内、そして続行ボタンです。](../images/0702.png)
 
-3. An <bpt id="p1">**</bpt>Add function<ept id="p1">**</ept> pop-up window will appear on the right. In the <bpt id="p1">**</bpt>Select a template<ept id="p1">**</ept> section click <bpt id="p2">**</bpt>HTTP trigger<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> 
+3. **追加機能**のポップアップ ウィンドウが右側に表示されます。 **[テンプレートの選択]** セクションで、 **[HTTP トリガー]** をクリックします。 **[追加]** をクリックします。 
 
-    ![Screenshot of the create a function step in the azure functions for dot net getting started pane inside Azure portal. The HTTP trigger card is highlighted to illustrate the display elements used to add a new webhook to an Azure function.](../images/0702a.png)
+    ![Azure Portal 内のドット ネットの [はじめに] ペインの Azure Functions で関数を作成する手順のスクリーンショット。 Azure Functions に新しい webhook を追加するために使用する表示要素を示す HTTP トリガー カードが強調表示されます。](../images/0702a.png)
 
 4. **[HttpTrigger1]** ブレードの **[開発者]** セクションで、**[コード + テスト]** をクリックします。 
 
-5. On the <bpt id="p1">**</bpt>Code + Test<ept id="p1">**</ept> blade, review the auto-generated code and note that the code is designed to run an HTTP request and log information. Also, notice the function returns a Hello message with a name. 
+5. **[コード + テスト]** ブレードで、自動生成されたコードを確認し、そのコードが HTTP 要求とログ情報を実行するように設計されていることに注意します。 また、この関数は名前を付けて Hello メッセージを返します。 
 
-    ![Screenshot of the function code. The Hello message is hightlighted.](../images/0704.png)
+    ![関数コードのスクリーンショット。 Hello メッセージが強調表示されます。](../images/0704.png)
 
 6. 関数エディターの上部のセクションで、**[関数の URL の取得]** をクリックします。 
 
 7. **[キー]** ドロップダウン リストの値が **[既定値]** に設定されていることを確認し、**[コピー]** をクリックして関数の URL をコピーします。 
 
-    ![Screenshot of the get function URL pane inside the function editor in Azure portal. The display elements get function URL button, set key dropdown, and copy URL button are highlighted to indicate how to obtain and copy the function URL from the function editor.](../images/0705.png)
+    ![Azure ポータルの関数エディター内の関数 URL 取得ペインのスクリーンショット。 [関数の URL の取得] ボタン、[設定器] ドロップダウン リスト、[URL をコピーする] ボタンの表示要素が強調表示され、関数エディターから関数の URL を取得してコピーする方法が示されています。](../images/0705.png)
 
-8. Open a new browser tab and paste the copied function URL into your web browser's address bar. When the page is requested the function will run. Notice the returned message stating that the function requires a name in the request body.
+8. 新しいブラウザー タブを開いて、コピーした関数の URL を Web ブラウザーのアドレス バーに貼り付けます。 ページが要求されると、関数を実行します。 返されるメッセージには、関数に要求本文内の名前が必要であることが表示されます。
 
     ![名前の提供を求めるメッセージのスクリーンショット。](../images/0706.png)
 
@@ -71,12 +71,12 @@ wts:
 
     **注**:たとえば、名前が Cindy の場合、最終的な URL は `https://azfuncxxx.azurewebsites.net/api/HttpTrigger1?code=X9xx9999xXXXXX9x9xxxXX==&name=cindy` のようになります。
 
-    ![Screenshot of a highlighted function URL and an appended example user name in the address bar of a web browser. The hello message and user name are also highlighted to illustrate the output of the function in the main browser window.](../images/0707.png)
+    ![強調表示された関数 URL のスクリーンショットと、Web ブラウザーのアドレス バーに追加されたユーザー名の例。 メイン ブラウザー ウィンドウ内に関数の出力を示す Hello メッセージとユーザー名も強調表示されます。](../images/0707.png)
 
-10. When you hit enter, your function runs and every invocation is traced. To view the traces, return to the Portal <bpt id="p1">**</bpt>HttpTrigger1 <ph id="ph1">\|</ph> Code + Test<ept id="p1">**</ept> blade and click <bpt id="p2">**</bpt>Monitor<ept id="p2">**</ept>. You can <bpt id="p1">**</bpt>configure<ept id="p1">**</ept> Application Insights by selecting the timestamp and click <bpt id="p2">**</bpt>Run query in Application Insights<ept id="p2">**</ept>.
+10. Enter キーを押すと、関数が実行され、すべての呼び出しがトレースされます。 トレースを表示するには、ポータルの **[HttpTrigger1 \| コードとテスト]** ブレードに戻り、 **[モニター]** をクリックします。 Application Insights を**構成**するには、タイムスタンプを選択し、 **[Application Insights でのクエリの実行]** をクリックします。
 
     ![Azure Portal の関数エディター内で関数を実行した結果のトレース情報ログのスクリーンショット。](../images/0709.png) 
 
-Congratulations! You have created a Function App to display a Hello message when there is an HTTP request.  
+おめでとうございます! このチュートリアルでは、HTTP 要求がある場合に Hello メッセージを表示する関数アプリを作成しました。  
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

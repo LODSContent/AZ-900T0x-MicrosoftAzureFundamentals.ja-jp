@@ -13,9 +13,9 @@ wts:
 
 2. **[すべてのサービス]** ブレードで、 **[ヘルプ + サポート]** を検索して選択し、 **[サポート プラン]** を選択します。
 
-3. Take a few minutes to review the different support plans. Notice what is included in the <bpt id="p1">**</bpt>Basic<ept id="p1">**</ept> plan. 
+3. さまざまなサポート プランを確認するには、数分かかります。 **基本**プランに含まれる内容を確認します。 
 
-4. Click <bpt id="p1">**</bpt>+ New support request<ept id="p1">**</ept>. The ticket is created based on the values you specify. 
+4. **[+ New support request]** (新しいサポート要求) をクリックします。 指定した値に基づいて、チケットが作成されます。 
 
     | 設定 | 値|
     |----|--------|
@@ -29,9 +29,9 @@ wts:
 
 5. **[次へ: ソリューション >>]** をクリックし、推奨される解決策に一通り目を通します。
 
-6. Click <bpt id="p1">**</bpt>Next: Details &gt;&gt;<ept id="p1">**</ept>. When submitting an actual support request, you would provide as much information as possible to allow for a speedy resolution of the issue. Your contact choices on this page depend on your support plan. 
+6. **[次へ: 詳細 >>]** をクリックします。 実際のサポート リクエストを提出する場合は、問題を迅速に解決することができるよう、できるだけ多くの情報を入力してください。 このページの連絡先の選択肢は、サポート プランによって異なります。 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will stop at this point. Do you understand how to submit a technical request?
+    **注:**  この時点で停止します。 技術的な要求を送信する方法がわかりましたか。
 
 # <a name="task-2-create-a-billing-support-request"></a>タスク 2:請求サポート リクエストを作成する
 
@@ -47,12 +47,12 @@ wts:
 
 2. **[次へ: ソリューション]** をクリックし、推奨される解決策に一通り目を通します。
 
-3. Click <bpt id="p1">**</bpt>Next: Details<ept id="p1">**</ept>.  When submitting a real support request you would provide as much information as possible to allow for a speedy resolution of the issue. 
+3. **[次へ: 詳細]** をクリックします。  実際のサポート リクエストを提出する場合は、問題を迅速に解決することができるよう、できるだけ多くの情報を入力してください。 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will STOP at this point. Do you understand how to submit a support request?
+    **注:**  この時点で停止します。 サポート リクエストを送信する方法がわかりましたか。
 
-4. Click <bpt id="p1">**</bpt>All support requests<ept id="p1">**</ept>. This is where your support requests are shown. An email is also sent to your email address containing details of the support request.
+4. **[すべてのサポート リクエスト]** をクリックします。 ここで、サポート リクエストが表示されます。 サポート リクエストの詳細を記載したメールがメール アドレスにも送信されます。
 
-さまざまなサポート プランを確認するには、数分かかります。
+おめでとうございます! 使用可能なサポート プラン オプションを表示し、新しいサポート リクエストの作成と確認を練習しました。
 
 **注**:クリックして [**Azure サポート チケットの作成**](https://azure.microsoft.com/en-us/support/create-ticket) に関する詳細を確認してください。

@@ -27,7 +27,7 @@ wts:
     | リージョン | **(米国) 米国東部** |
     
    
-4. Click the <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> button. Ensure the validation passes. Then hit create to deploy the resource.
+4. **[確認および作成]** ボタンをクリックします。 検証できたことを確認します。 次に、作成を押してリソースをデプロイします。
 
 
 # <a name="task-2-create-two-virtual-machines"></a>タスク 2:2 つの仮想マシンを作成する
@@ -51,13 +51,13 @@ wts:
    | 選択した受信ポート| **RDP (3389)** |
    
 
-3. Select the <bpt id="p1">**</bpt>Networking<ept id="p1">**</ept> tab. Make sure the virtual machine is placed in the <bpt id="p2">**</bpt>vnet1<ept id="p2">**</ept> virtual network. Review the default settings, but do not make any other changes. 
+3. **[ネットワーク]** タブを選択します。仮想マシンが **vnet1** 仮想ネットワークに配置されていることを確認します。 既定の設定を確認しますが、他の変更は行わないでください。 
 
-4. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>. After the Validation passes, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Deployment times can vary but it can generally take between three to six minutes to deploy.
+4. **[Review + create]\(レビュー + 作成\)** をクリックします。 検証ができたら、**[作成]** をクリックします。 デプロイにかかる時間は場合により異なりますが、通常 3 分から 6 分かかる可能性があります。
 
 5. デプロイを監視しながら、次の手順に進みます。 
 
-6. Create a second virtual machine by repeating steps <bpt id="p1">**</bpt>2 to 4<ept id="p1">**</ept> above. Make sure you use a different virtual machine name, that the virtual machine is in the same virtual network, and is using a new public IP address:
+6. 上記の手順 **2〜4** を繰り返して、2 番目の仮想マシンを作成します。 別の仮想マシン名を使用していて、その仮想マシンが新しい仮想ネットワークにあり、新しいパブリック IP アドレスを使用していることを確認してください。
 
     | 設定 | 値 |
     | --- | --- |
@@ -70,9 +70,9 @@ wts:
 
 # <a name="task-3-test-the-connection"></a>タスク 3:接続をテストする 
 
-In this task, we will try to test whether the virtual machines can communicate (ping) each other. If not we will install a rule to allow an ICMP connection. Usually ICMP connections are automatically blocked.
+このタスクでは、仮想マシンが相互に通信 (ping) できることをテストします。 そうでない場合は、ICMP 接続を許可するルールをインストールします。 通常、ICMP 接続は自動的にブロックされます。
 
-1. From the <bpt id="p1">**</bpt>All resources<ept id="p1">**</ept> blade, search for <bpt id="p2">**</bpt>vm1<ept id="p2">**</ept>, open its <bpt id="p3">**</bpt>Overview<ept id="p3">**</ept> blade, and make sure its <bpt id="p4">**</bpt>Status<ept id="p4">**</ept> is <bpt id="p5">**</bpt>Running<ept id="p5">**</ept>. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. **[すべてのリソース]** ブレードで、「**vm1**」を検索して **[概要]** ブレードを開き、**[状態]** が **[実行中]** であることを確認します。 場合によっては、ページを**更新する**必要があります。
 
 2. **[概要]** ブレードで、 **[接続]** を選択して、ドロップ ダウンから **[RDP]** を選びます。
 
@@ -84,7 +84,7 @@ In this task, we will try to test whether the virtual machines can communicate (
 
 5. **[Windows セキュリティ]** ウィンドウで、ユーザー名「**azureuser**」とパスワード「**Pa$$w0rd1234**」を入力し、**[OK]** をクリックします。
 
-6. You may receive a certificate warning during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> to create the connection and connect to your deployed VM. You should connect successfully. Close the Windows Server and Dashboard windows that pop up. You should see a Blue Windows background. You are now in your virtual machine.
+6. サインイン処理中に証明書の警告が表示される場合があります。 **[はい]** をクリックして、接続を作成してデプロイした VM に接続します。 正常に接続されるはずです。 ポップアップ表示される Windows Server ウィンドウとダッシュボード ウィンドウを閉じます。 青い Windows の背景が表示されます。 これで、仮想マシンが作成されました。
 
 7. 新しく作成された**両方**の仮想マシンを RDP 経由で接続し、[スタート] メニュー > [設定] > [ネットワークとインターネット] > [Locate Windows Firewall]\(Windows ファイアウォールの場所を特定する\) を開いて、パブリック ファイアウォールとプライベート ファイアウォールの両方を無効にします。
 
@@ -96,9 +96,9 @@ In this task, we will try to test whether the virtual machines can communicate (
    ping vm2
    ```
 
- 10. You should be successful. You have pinged VM2 from VM1.
+ 10. 成功するはずです。 VM1 から VM2 に ping を実行しました。
 
 
-<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have configured and deployed two virtual machines in a virtual network, and then you were able to connect them.
+**お疲れさまでした。** 仮想ネットワークに 2 つの仮想マシンを構成して展開し、それらを接続できるようになりました。
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

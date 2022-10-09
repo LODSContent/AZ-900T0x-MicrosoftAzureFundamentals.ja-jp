@@ -11,15 +11,15 @@ wts:
 
 このタスクでは、Azure 料金計算ツールを使用してサンプルのインフラストラクチャのコストを見積もります。 
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To create an Azure Pricing Calculator estimate, this walkthrough provides example configurations for the VM and related resources. Use this example configurations or provide the Azure Pricing Calculator with details of your <bpt id="p1">*</bpt>actual<ept id="p1">*</ept> resource requirements instead.
+**注**:このチュートリアルでは、Azure 料金計算ツールの見積もりを作成するために、VM および関連リソースの構成例を示します。 この構成例を使用するか、または Azure 料金計算ツールに自分の *実際の* リソース要件に関する詳細を入力します。
 
 1. ブラウザーで、Azure [料金計算ツール](https://azure.microsoft.com/en-us/pricing/calculator/)の Web ページに移動します。
 
 2. VM 構成の詳細を追加するには、 **[製品]** タブの **[仮想マシン]** をクリックします。下にスクロールして、仮想マシンの詳細を表示します。 
 
-3. Replace <bpt id="p1">**</bpt>Your Estimate<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Virtual Machines<ept id="p2">**</ept> text with more descriptive names for your Azure Pricing Calculator estimate and your VM configuration. This walkthrough example uses <bpt id="p1">**</bpt>My Pricing Calculator Estimate<ept id="p1">**</ept> for the estimate, and <bpt id="p2">**</bpt>Windows VM<ept id="p2">**</ept> for the VM configuration.
+3. **[見積もり]** と **[仮想マシン]** テキストに、Azure 料金計算ツールの見積もりと VM 構成に関するより詳細な記述名を入力します。 このチュートリアルの例では、見積もりの名前に "**料金計算ツールの見積もり**"、VM 構成の名前に "**Windows VM**" を使用します。
 
-   ![Screenshot of the vm configuration area within the Azure pricing calculator estimate webpage. The highlighted estimate name and vm configuration name indicate how to add an estimate name and a vm configuration name to an Azure pricing calculator estimate.](../images/1901.png)
+   ![Azure 料金計算ツールの見積もり Web ページ内の vm 構成領域のスクリーンショット。 強調表示されている見積もり名と VM 構成名は、Azure の料金計算ツールの見積もりに見積もり名と VM 構成名を追加する方法を示します。](../images/1901.png)
 
 4. 既定の VM 構成を変更します。
 
@@ -31,19 +31,19 @@ wts:
     | サービス レベル | **Standard** |  
     | インスタンス | **[A2:2 コア数、3.5 GB の RAM、135 GB の一時ストレージ]** |
 
-   ![Screenshot of the vm configuration area within the Azure pricing calculator estimate webpage. The highlighted examples of user inputted vm configuration property values indicate how to specify a vm configuration within an Azure pricing calculator estimate.](../images/1902.png)
+   ![Azure 料金計算ツールの見積もり Web ページ内の vm 構成領域のスクリーンショット。 強調表示されているユーザーが入力した VM 構成プロパティ値の例は、Azure の料金計算ツールの見積もり内で VM 構成を指定する方法を示しています。](../images/1902.png)
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The VM instance specifications and pricing may differ from those in this example. Follow this walkthrough by choosing an instance that matches the example as closely as possible. To view details about the different VM product options, choose <bpt id="p1">**</bpt>Product details<ept id="p1">**</ept> from the <bpt id="p2">**</bpt>More info<ept id="p2">**</ept> menu on the right.
+    **注**:VM インスタンスの仕様と価格は、この例の仕様と異なる場合があります。 このチュートリアルでは、例にできるだけ近いインスタンスを選択します。 さまざまな VM 製品オプションの詳細を表示するには、右側の **[詳細情報]** メニューの **[製品の詳細]** を選択します。
 
 5. **[課金オプション]** を **[従量課金制]** に設定します。
 
-   ![Screenshot of the vm billing options area within the Azure pricing calculator estimate webpage. The highlighted pay as you go billing option indicates how to specify a billing option for a vm within an Azure pricing calculator estimate.](../images/1903.png)
+   ![Azure 価格計算ツールの見積もり Web ページ内の vm 請求オプション領域のスクリーンショット。 強調表示されている [従量課金制] 課金オプションは、Azure の料金計算ツールの見積もり内で VM の課金オプションを指定する方法を示します。](../images/1903.png)
 
-6. **注**:このチュートリアルでは、Azure 料金計算ツールの見積もりを作成するために、VM および関連リソースの構成例を示します。
+6. Azure では、1 か月は 730 時間と定義されています。 各月において VM が100 パーセント利用可能である必要がある場合、月あたりの時間の値を「`730`」に設定します。 このチュートリアルの例では、各月における VM 1 台あたりの利用可能状況が 50 パーセントになっています。
 
     VM の数を「`1`」に設定したままにして、月の時間の値を「`365`」に変更します。
 
-   ![この構成例を使用するか、または Azure 料金計算ツールに自分の *実際の* リソース要件に関する詳細を入力します。](../images/1904.png)
+   ![Azure 価格計算ツールの見積もり Web ページ内の vm 請求オプション領域のスクリーンショット。 強調表示されている VM インスタンスの数と月ごとの時間オプションは、Azure の料金計算ツールの見積もり内の VM のインスタンス数と月あたりの時間を指定する方法を示しています。](../images/1904.png)
 
 7. **[管理 OS ディスク]** で、既定の VM 記憶域の構成を変更します。
 
@@ -51,25 +51,25 @@ wts:
     | ---- | --------- | --------------- | -------- | -------------------- |
     | Standard HDD | S30: 1024 GiB | 1 | オフ | 10,000 |
 
-   ![Screenshot of the managed OS Disks options area within the Azure pricing calculator estimate webpage. The highlighted tier type, disk size, number of disks, and number of storage transactions, options indicate how to specify a storage configuration for a vm within an Azure pricing calculator estimate.](../images/1905.png)
+   ![Azure 価格計算ツールの見積もり Web ページ内の管理対象 OS ディスク オプション領域のスクリーンショット。 強調表示されたレベルの種類、ディスク サイズ、ディスクの数、ストレージ トランザクションの数は、Azure の料金計算ツールの見積もり内で VM のストレージ構成を指定する方法を示します。](../images/1905.png)
 
-8. To add networking bandwidth to your estimate, go to the top of the Azure Pricing Calculator webpage. Click <bpt id="p1">**</bpt>Networking<ept id="p1">**</ept> in the product menu on the left, then click the <bpt id="p2">**</bpt>Bandwidth<ept id="p2">**</ept> tile. In the <bpt id="p1">**</bpt>Bandwidth added<ept id="p1">**</ept> message dialog, click <bpt id="p2">**</bpt>View<ept id="p2">**</ept>.
+8. 見積もりにネットワーク帯域幅を追加するには、Azure 料金計算ツール Web ページの上部に移動します。 左側の製品メニューから **[ネットワーク]** をクリックし、 **[帯域幅]** タイルをクリックします。 **[追加済み帯域幅]** メッセージ ダイアログで、 **[表示]** をクリックします。
 
-   ![Screenshot of the networking products area within the Azure pricing calculator webpage. The highlighted networking, add bandwidth, and view bandwidth, tiles indicate how to add and view details of a networking bandwidth configuration in an Azure pricing calculator estimate.](../images/1906.png)
+   ![Azure 価格計算 Web ページ内のネットワーク製品エリアのスクリーンショット。 強調表示されているネットワーク、帯域幅の追加、帯域幅の表示のタイルでは、Azure の料金計算ツールの見積もりでネットワーク帯域幅構成の詳細を追加および表示する方法が示されます。](../images/1906.png)
 
-9. **[見積もり]** と **[仮想マシン]** テキストに、Azure 料金計算ツールの見積もりと VM 構成に関するより詳細な記述名を入力します。
+9. VM 帯域幅の構成の名前を追加します。 このチュートリアルの例では、"**Bandwidth:Windows VM**" という名前を使用します。 次の詳細を追加して、既定の帯域幅の構成を変更します。
 
     | リージョン | ゾーン 1 送信データ転送 |
     | ------ | -------------------------------------- |
     | 北ヨーロッパ | 50 GB |
 
-   ![このチュートリアルの例では、見積もりの名前に "**料金計算ツールの見積もり**"、VM 構成の名前に "**Windows VM**" を使用します。](../images/1907.png)
+   ![Azure 料金計算ツールの見積もり Web ページ内のネットワーク帯域幅の構成領域のスクリーンショット。 強調表示されているユーザーが入力した帯域幅プロパティ値の例は、Azure の料金計算ツールの見積もり内で VM の帯域幅構成を指定する方法を示しています。](../images/1907.png)
 
-10. To add an Application Gateway, return to the top of the Azure Pricing Calculator webpage. In the <bpt id="p1">**</bpt>Networking<ept id="p1">**</ept> product menu, click the <bpt id="p2">**</bpt>Application Gateway<ept id="p2">**</ept> tile. In the <bpt id="p1">**</bpt>Application Gateway<ept id="p1">**</ept> message dialog, click <bpt id="p2">**</bpt>View<ept id="p2">**</ept>.
+10. Application Gateway を追加するには、Azure 料金計算ツール Web ページの上部に戻ります。 **[ネットワーク]** 製品メニューで、 **[Application Gateway]** タイルをクリックします。 **[Application Gateway]** メッセージ ダイアログで、 **[表示]** をクリックします。
 
-    ![Azure 料金計算ツールの見積もり Web ページ内の vm 構成領域のスクリーンショット。](../images/1908.png)
+    ![Azure 価格計算 Web ページ内のネットワーク製品エリアのスクリーンショット。 強調表示されているネットワーク、Application Gateway の追加、Application Gateway の表示のタイルでは、Azure の料金計算ツールの見積もりで Application Gateway 構成の詳細を追加および表示する方法が示されます。](../images/1908.png)
 
-11. 強調表示されている見積もり名と VM 構成名は、Azure の料金計算ツールの見積もりに見積もり名と VM 構成名を追加する方法を示します。
+11. Application Gateway の構成の名前を追加します。 このチュートリアルでは、"**App Gateway:Windows VM**" という名前を使用します。 次の詳細を追加して、既定の Application Gateway 構成を変更します。
 
     | 設定 | 値 |
     | -- | -- |
@@ -90,12 +90,12 @@ wts:
 
 1. Azure 料金計算ツール Web ページの最下部にスクロールし、合計 **[推定月額費用]** を表示します。
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Explore the various options available within the Azure Pricing Calculator. For example, this walkthrough requires you to update the currency to Euro.
+    **注**:Azure 料金計算ツールで使用できるさまざまなオプションについて説明します。 たとえば、このチュートリアルでは、通貨をユーロに更新する必要があります。
 
 2. 通貨をユーロに変更し、 **[エクスポート]** を選択して、Microsoft Excel (`.xlsx`) 形式でオフラインで表示するための見積もりのコピーをダウンロードします。
 
-    ![Screenshot of the total estimated monthly costs within the Azure pricing calculator estimate webpage. The highlighted euro currency option indicates how to modify the currency used in an Azure pricing calculator estimate. The highlighted export option illustrates how to download a copy of an estimate for offline viewing.](../images/1910.png)
+    ![Azure 料金計算ツールの見積もり Web ページ内の合計月額費用のスクリーンショット。 強調表示されているユーロ通貨オプションは、Azure 料金計算ツールの見積もりで使用される通貨を変更する方法を示します。 強調表示されている [エクスポート] オプションは、オフライン表示用の見積もりのコピーをダウンロードする方法を示しています。](../images/1910.png)
 
     ![Microsoft Excel での Azure 料金計算ツールの見積もり例のスクリーンショット。](../images/1911.png)
 
-Congratulations! You downloaded an estimate from the Azure Pricing Calculator.
+おめでとうございます! Azure 料金計算ツールから見積もりをダウンロードしました。

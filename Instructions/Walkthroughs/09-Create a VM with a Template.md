@@ -11,21 +11,21 @@ wts:
 
 このタスクでは、Azure QuickStart ギャラリーを参照し、仮想マシンを作成するテンプレートをデプロイします。 
 
-1. Within the lab environment, open a new browser window, and enter T <ph id="ph1">https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true</ph>. In the gallery you will find a number of popular and recently updated templates. These templates automate deployment of Azure resources, including installation of popular software packages. Browse through the many different types of templates that are available.
+1. ラボ環境内で、新しいブラウザー ウィンドウを開き、「T https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true 」と入力します。 ギャラリーには、人気のあるテンプレートや最近更新されたテンプレートが多数あります。 これらのテンプレートを使用すると、一般的なソフトウェア パッケージのインストールを含む、Azure リソースのデプロイを自動化できます。 使用可能なさまざまな種類のテンプレートを参照します。
 
 3. **[基本的な Windows VM のデプロイ]** を選択します
 
-4. Click the <bpt id="p1">**</bpt>Deploy to Azure<ept id="p1">**</ept> button. Your browser session will be automatically redirected to the <bpt id="p1">[</bpt>Azure portal<ept id="p1">](http://portal.azure.com/)</ept>.
+4. **[Deploy to Azure]** (Azure にデプロイ) ボタンをクリックします。 ブラウザー セッションは自動的に [Azure portal](http://portal.azure.com/) にリダイレクトされます。
 
-  <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The <bpt id="p2">**</bpt>Deploy to Azure<ept id="p2">**</ept> button enables you to deploy the template via the Azure portal. During such deployment, you will be prompted only for small set of configuration parameters. 
+  **注**: **[Azure にデプロイ]** ボタンを使用すると、テンプレートを Azure portal に直接デプロイできます。 このようなデプロイの際は、一部の構成パラメーターについてのみプロンプトが表示されます。 
 
 5. プロンプトが表示されたら、前の手順で指定した資格情報を使用して Azure サブスクリプションにサインインします。
 
-6. Click <bpt id="p1">**</bpt>Edit template<ept id="p1">**</ept>. The Resource Manager template format uses the JSON format. Review the parameters and variables.  Then locate the parameter for virtual machine name. Change the name to <bpt id="p1">**</bpt>myVMTemplate<ept id="p1">**</ept>. <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> your changes. 
+6. **[テンプレートの編集]** をクリックします。 Resource Manager テンプレート形式は、JSON 形式を使用しています。 パラメーターと変数を確認します。  次に、仮想マシン名のパラメーターを見つけます。 名前を **myVMTemplate** に変更します。 変更内容を**保存**します。 
 
     ![VM 名が変更されたテンプレートのスクリーンショット。](../images/0901.png)
 
-7. Now configure the parameters required by the template (replace <bpt id="p1">***</bpt>xxxx<ept id="p1">***</ept> in the DNS label prefix with letters and digits such that the label is globally unique). Leave the defaults for everything else. 
+7. 次に、テンプレートに必要なパラメーターを構成します (ラベルがグローバルに一意になるように、DNS ラベルのプレフィックスの ***xxxx*** を文字と数字に置き換えます)。 その他は既定値のままにします。 
 
     | 設定| 値|
     |----|----|
@@ -50,7 +50,7 @@ wts:
 
 2. 新しい仮想マシンが作成されたことを確認します。 
 
-    ![Screenshot of the virtual machines page. The new VM is shown and running.](../images/0902.png)
+    ![仮想マシン ページのスクリーンショット。 新しい VM が表示され、実行されます。](../images/0902.png)
 
 3. 仮想マシンを選択し、**[概要]** ウィンドウで、**[監視]** タブを選択し、下にスクロールして監視データを表示します。
 
@@ -60,15 +60,15 @@ wts:
 
     ![仮想マシンの監視グラフのスクリーンショット。](../images/0903.png)
 
-5. ラボ環境内で、新しいブラウザー ウィンドウを開き、「T https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true 」と入力します。
+5. 任意のグラフをクリックします。 **メトリックを追加**し、グラフの種類を変更できることに確認します。
 
-6. ギャラリーには、人気のあるテンプレートや最近更新されたテンプレートが多数あります。
-7. これらのテンプレートを使用すると、一般的なソフトウェア パッケージのインストールを含む、Azure リソースのデプロイを自動化できます。 
+6. **[概要]** ブレードに戻ります。 (トグル バーを左にスライドする)
+7. **[アクティビティ ログ]** (左側のウィンドウ) をクリックします。 アクティビティ ログには、リソースの作成や変更などのイベントが記録されます。 
 
 8. **[フィルターの追加]** をクリックし、さまざまなイベントの種類と操作を検索してみます。 
 
     ![[イベントの種類] が選択された [フィルターの追加] ページのスクリーンショット。](../images/0904.png)
 
-使用可能なさまざまな種類のテンプレートを参照します。
+おめでとうございます! これで、テンプレートからリソースが正常に作成され、そのテンプレートが Azure にデプロイされました。
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

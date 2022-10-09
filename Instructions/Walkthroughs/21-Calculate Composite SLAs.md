@@ -7,7 +7,7 @@ wts:
 
 このチュートリアルでは、Azure サービスの可用性 SLA を決定し、アプリケーション複合 SLA ベースの推定可用性を計算します。
 
-Our example application consists of these Azure services. We will not go in to deep architectural configuration and considerations, the intention here is to give an high level example.
+このサンプル アプリケーションは、次の Azure サービスで構成されています。 ここでは、高レベルの例を提供することとし、アーキテクチャーの詳細な構成や考慮事項については割愛します。
 
 + **App Services**:アプリケーションをホストします。
 + **Azure AD B2C**:ユーザー ログインを認証し、プロファイルを管理します。
@@ -18,19 +18,19 @@ Our example application consists of these Azure services. We will not go in to d
 
 1. ブラウザーで、[[Azure サービスの SLA サマリー]](https://azure.microsoft.com/en-us/support/legal/sla/summary/) ページに移動します。
 
-2. Locate the <bpt id="p1">**</bpt>App Service<ept id="p1">**</ept> SLA uptime value, <bpt id="p2">**</bpt>99.95%<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>View full details<ept id="p1">**</ept>, and then expand <bpt id="p2">**</bpt>SLA details<ept id="p2">**</ept>. Notice the <bpt id="p1">**</bpt>Monthly uptime percentages<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Service Credits<ept id="p2">**</ept>.
+2. **アプリ サービス** の SLA アップタイム値 **99.95%** を見つけます。 **[詳細の表示]** をクリックし、 **[SLA の詳細]** を展開します。 **[月間アップタイム率]** と **[サービス クレジット]** を確認します。
 
 3. SLA Web ページに戻り、 **[Azure Active Directory B2C]** サービスを見つけて、SLA アップタイムの値 **[99.9%]** を確認します。 
 
 4. **Application Gateway** の SLA アップタイム値 **99.95%** を確認します。 
 
-5. The Azure SQL database uses Premium tiers but is not configured for Zone Redundant Deployments. Locate the <bpt id="p1">**</bpt>Azure SQL Database<ept id="p1">**</ept> SLA uptime value, <bpt id="p2">**</bpt>99.99%<ept id="p2">**</ept>. 
+5. Azure SQL データベースでは Premium レベルを使用しますが、ゾーン冗長デプロイ向けには構成されていません。 **[Azure SQL Database]** SLA のアップタイム値 **[99.99%]** を見つけます。 
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: There are different uptime values for different configurations and deployments of Azure SQL Database. It is important you are clear on your required uptime values, when planning and costing your deployment and configuration. Small changes in uptime can have impact on service costs as well as potentially increase complexity in configuration. Some other services that may be of interest on the Azure SLA summary web page would include <bpt id="p1">**</bpt>Virtual Machines<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Storage Accounts<ept id="p2">**</ept> and <bpt id="p3">**</bpt>Cosmos DB<ept id="p3">**</ept>.
+    **注**:Azure SQL Database の構成とデプロイごとに、アップタイム値が異なります。 デプロイと構成を計画およびコスト管理する際には、必要なアップタイム値を明確にすることが重要です。 アップタイムの変更が小さくても、サービス コストに影響を与える可能性があり、構成の複雑さが増大する可能性があります。 Azure SLA 概要 Web ページで興味を引く他のサービスには、**Virtual Machines**、**ストレージ アカウント**、**Cosmos DB** などがあります。
 
 # <a name="task-2-calculate-the-application-composite-sla-percentage-uptime"></a>タスク 2:アプリケーションの複合 SLA のアップタイム率を計算する
 
-1. このサンプル アプリケーションは、次の Azure サービスで構成されています。
+1. アプリケーションを構成するサービスのいずれかが利用できない場合、ユーザーはサインインしてアプリケーションを利用できません。 そのため、アプリケーションの合計アップタイムは次の要素で構成されます。
 
     **アプリ サービスのアップタイム率** X **Azure AD B2C のアップタイム率** X  **Azure Application Gateway のアップタイム率** X **Azure SQL Database のアップタイム率** = **合計アップタイム率**
 
@@ -40,4 +40,4 @@ Our example application consists of these Azure services. We will not go in to d
 
     これは、現在のサービスおよびアーキテクチャを使用したアプリケーションの SAL ベースの推定可用性です。
 
-ここでは、高レベルの例を提供することとし、アーキテクチャーの詳細な構成や考慮事項については割愛します。
+おめでとうございます! サンプル アプリケーションの各サービスの SLA べース アップタイムを決定し、アプリケーションの複合 SLA ベース推定可用性を計算しました。

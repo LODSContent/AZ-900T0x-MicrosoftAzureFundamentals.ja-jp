@@ -57,22 +57,22 @@ wts:
 
     ![[SQL Database の作成] ブレードの [追加設定] タブのスクリーンショット。テーブルに従って設定が選択され、[確認と作成] ボタンが強調表示されています。](../images/0501c.png)
 
-7. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and then click <bpt id="p2">**</bpt>Create<ept id="p2">**</ept> to deploy and provision the resource group, server, and database. It can take approx. 2 to 5 minutes to deploy.
+7. **[確認と作成]** をクリックしてから **[作成]** をクリックして、リソース グループ、サーバー、データベースをデプロイおよびプロビジョニングします。 デプロイには約 2 分から 5 分かかることがあります。
 
 
 # <a name="task-2-test-the-database"></a>タスク 2:データベースをテストする。
 
 このタスクでは、SQL サーバーを構成し、SQL クエリを実行します。 
 
-1. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, from the <bpt id="p1">**</bpt>All Resources<ept id="p1">**</ept> blade, search and select <bpt id="p2">**</bpt>Databases<ept id="p2">**</ept>, then <bpt id="p3">**</bpt>SQL databases<ept id="p3">**</ept> ensure your new database was created. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. デプロイが完了したら、デプロイ ブレードで [リソースに移動] をクリックします。 **[すべてのリソース]** ブレードで、「**データベース**」を検索して選択し、**[SQL データベース]** を選択し、新しいデータベースが作成されたことを確認します。 場合によっては、ページを**更新する**必要があります。
 
     ![先ほどデプロイされた SQL データベースとサーバーのスクリーンショット。](../images/0502.png)
 
-2. Click the <bpt id="p1">**</bpt>db1<ept id="p1">**</ept> entry representing the SQL database you created. On the db1 blade click <bpt id="p1">**</bpt>Query editor (preview)<ept id="p1">**</ept>.
+2. 作成した SQL データベースを表す **db1** エントリをクリックします。 db1 ブレードで、**クエリ エディター (プレビュー)** をクリックします。
 
 3. パスワード **Pa$$w0rd1234** を使用して、**sqluser** としてログインします。
 
-4. You will not be able to login. Read the error closely and make note of the IP address that needs to be allowed through the firewall. 
+4. ログインすることはできません。 エラーをよく読み、ファイアウォール経由で許可する必要がある IP アドレスをメモしておきます。 
 
     ![IP アドレス エラーを示すクエリ エディターのログイン ページのスクリーンショット。](../images/0503.png)
 
@@ -82,13 +82,13 @@ wts:
 
 6. db1 の **[概要]** ブレードから、概要画面の上部中央にある **[サーバー ファイアウォールの設定]** をクリックします。
 
-7. Click <bpt id="p1">**</bpt>+ Add client IP<ept id="p1">**</ept> (top menu bar) to add the IP address referenced in the error. (it may have autofilled for you - if not paste it into the IP address fields). Be sure to <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> your changes. 
+7. **[+ クライアント IP の追加]** (トップ メニュー バー) をクリックし、エラーで参照されている IP アドレスを追加します。 (自動入力されている可能性があります - そうでない場合は、IP アドレス フィールドに貼り付けてください)。 **[保存]** をクリックし、必ず変更を保存します。 
 
     ![新しい IP 規則が強調表示されている、SQL サーバー ファイアウォールの設定ページのスクリーンショット。](../images/0506.png)
 
-8. Return to your SQL database (slide the bottom toggle bar to the left) and click on <bpt id="p1">**</bpt>Query Editor (Preview)<ept id="p1">**</ept>. Try to login again as <bpt id="p1">**</bpt>sqluser<ept id="p1">**</ept> with the password <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>. This time you should succeed. Note that it may take a couple of minutes for the new firewall rule to be deployed. 
+8. SQL データベースに戻り (下部のトグル バーを左にスライドします)、**[クエリ エディター (プレビュー)]** をクリックします。 パスワード **Pa$$w0rd1234** を使用して、**sqluser** として、もう一度ログインしてみます。 今度は成功するはずです。 新しいファイアウォール規則がデプロイされるまでに数分かかる場合があります。 
 
-9. Once you log in successfully, the query pane appears. Enter the following query into the editor pane. 
+9. 正常にログインすると、クエリ ウィンドウが表示されます。 エディター ウィンドウに次のクエリを入力します。 
 
     ```SQL
     SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
@@ -99,10 +99,10 @@ wts:
 
     ![クエリ ペインが示され、コマンドが正常に実行されている、クエリ エディターのスクリーンショット。](../images/0507.png)
 
-10. Click <bpt id="p1">**</bpt>Run<ept id="p1">**</ept>, and then review the query results in the <bpt id="p2">**</bpt>Results<ept id="p2">**</ept> pane. The query should run successfully.
+10. **[実行]** をクリックしてから、**[結果]** ペインでクエリの結果を確認します。 クエリは正常に実行されるはずです。
 
     ![SQL コードが正常に実行され、[結果] ペインに出力が表示されている、データベースのクエリ エディター ペインのスクリーンショット。](../images/0508.png)
 
-Congratulations! You have created a SQL database in Azure and successfully queried the data in that database.
+おめでとうございます。 Azure で SQL Database を作成し、そのデータベース内のデータを正常にクエリしました。
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

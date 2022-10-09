@@ -34,7 +34,7 @@ wts:
 
 1. Cloud Shell ペインの左上のドロップダウン メニューで、「**PowerShell**」が選択されていることを確認します。
 
-2. Verify your new resource group by running the following command in the Powershell window. Press <bpt id="p1">**</bpt>Enter<ept id="p1">**</ept> to run the command.
+2. Powershell ウィンドウで次のコマンドを実行して、新しいリソース グループを確認します。 **Enter** キーを押してコマンドを実行します。
 
     ```PowerShell
     Get-AzResourceGroup | Format-Table
@@ -57,7 +57,7 @@ wts:
 
 5. VM が作成されたら、PowerShell セッションの CloudShell ペインを閉じます。
 
-6. In the Azure portal, search for <bpt id="p1">**</bpt>Virtual machines<ept id="p1">**</ept> and verify the <bpt id="p2">**</bpt>myVMPS<ept id="p2">**</ept> is running. This may take a few minutes.
+6. Azure portal で、**仮想マシン**を検索し、**myVMPS** が実行されていることを確認します。 これには数分かかることがあります。
 
     ![myVMPS が実行中の状態の仮想マシン ページのスクリーンショット。](../images/1001.png)
 
@@ -71,7 +71,7 @@ wts:
 
 2. Cloud Shell ペインの左上のドロップダウン メニューで、「**PowerShell**」が選択されていることを確認します。
 
-3. Retrieve information about your virtual machine including name, resource group, location, and status. Notice the PowerState is <bpt id="p1">**</bpt>running<ept id="p1">**</ept>.
+3. 名前、リソース グループ、場所、状態など、仮想マシンに関する情報を取得します。 PowerState が**実行されている**ことを確認してください。
 
     ```PowerShell
     Get-AzVM -name myVMPS -status | Format-Table -autosize
@@ -82,9 +82,9 @@ wts:
     ```PowerShell
     Stop-AzVM -ResourceGroupName myRGPS -Name myVMPS
     ```
-5. When prompted confirm (Yes) to the action. Wait for <bpt id="p1">**</bpt>Succeeded<ept id="p1">**</ept> status.
+5. プロンプトが表示されたら、[はい] を選んでアクションを確認します。 **成功**ステータスを待ちます。
 
-6. Verify your virtual machine state. The PowerState should now be <bpt id="p1">**</bpt>deallocated<ept id="p1">**</ept>. You can also verify the virtual machine status in the portal. Close Cloudshell.
+6. 仮想マシンの状態を確認します。 これで、PowerState の**割り当てが解除されます**。 ポータルで仮想マシンの状態を確認することもできます。 Cloudshell を閉じます。
 
     ```PowerShell
     Get-AzVM -name myVMPS -status | Format-Table -autosize
@@ -98,7 +98,7 @@ wts:
 
 1. **[すべてのサービス]** ブレードから、 **[アドバイザー]** を検索して選択します。 
 
-2. On the <bpt id="p1">**</bpt>Advisor<ept id="p1">**</ept> blade, select <bpt id="p2">**</bpt>Overview<ept id="p2">**</ept>. Notice recommendations are grouped by Reliability, Security, Performance, and Cost. 
+2. **[アドバイザー]** ブレードで、 **[概要]** を選択します。 通知の推奨事項は、信頼性、セキュリティ、パフォーマンス、コストごとにグループ化されているためご注意ください。 
 
     ![アドバイザーの概要ページのスクリーンショット。 ](../images/1003.png)
 
@@ -114,6 +114,6 @@ wts:
 
 6. 時間があれば、Azure PowerShell の試用を続けてください。 
 
-Congratulations! You have configured Cloud Shell, created a virtual machine using PowerShell, practiced with PowerShell commands, and viewed Advisor recommendations.
+おめでとうございます! Cloud Shell を構成し、PowerShell を使用して仮想マシンを作成し、PowerShell コマンドで練習し、Advisor の推奨事項を確認しました。
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

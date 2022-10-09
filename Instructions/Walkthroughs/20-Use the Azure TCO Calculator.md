@@ -8,7 +8,7 @@ wts:
 
 このチュートリアルでは、総保有コスト (TCO) 計算ツールを使用して、オンプレミス環境とのコスト比較レポートを作成します。
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This walkthrough provides example definitions of on-premises infrastructure and workloads for a typical datacenter. To create a TCO Calculator report, use the example definitions or provide details of your <bpt id="p1">*</bpt>actual<ept id="p1">*</ept> on-premises infrastructure and workloads.
+**注**:このチュートリアルでは、一般的なデータセンターのオンプレミス インフラストラクチャとワークロードの定義例を示します。 TCO 計算ツール レポートを作成するには、定義例を使用するか、*実際の*オンプレミス インフラストラクチャとワークロードの詳細を入力します。
 
 # <a name="task-1-configure-the-tco-calculator"></a>タスク 1:TCO 計算ツールを構成する
 
@@ -88,6 +88,6 @@ wts:
 
 3. レポートの PDF コピーを保存または印刷するには、 **[ダウンロード]** をクリックします。
 
-    ![Screenshot of the report pane of the tco calculator in Azure. The highlighted and completed input fields indicates how set the tco calculator timeframe to three years and the region to north europe. A graph shows the cost of on-premises infrastructure and workloads off-set against the reduced cost of using Azure.](../images/2001.png)
+    ![Azure の総保有コスト (TCO) 計算ツールのレポート ウィンドウのスクリーンショット。 強調表示されている入力済みのフィールドは、TCO 計算ツールの [期間] を [3 years] に設定し、[リージョン] を [北ヨーロッパ] に設定する方法を示します。 グラフは、Azure の使用によるコストの削減に対して、オンプレミス インフラストラクチャとワークロードのコストのオフセットを示しています。](../images/2001.png)
 
-Congratulations! You have used the TCO Calculator to generate a cost comparison report for an on-premises environment.
+おめでとうございます! TCO 計算ツールを使用して、オンプレミス環境とのコスト比較レポートを作成しました。

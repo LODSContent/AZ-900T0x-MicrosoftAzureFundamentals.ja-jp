@@ -19,16 +19,16 @@ wts:
 
 4. ポリシーの**範囲**はサブスクリプション全体になります。 
 
-5. Under <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> Select the <bpt id="p2">**</bpt>Policy definition<ept id="p2">**</ept> ellipsis button (right side of textbox). In the <bpt id="p1">**</bpt>Search<ept id="p1">**</ept> box, enter the value <bpt id="p2">**</bpt>tag<ept id="p2">**</ept>. A list of related Policies with the word <bpt id="p1">**</bpt>tag<ept id="p1">**</ept> will appear. Scroll down till you find the <bpt id="p1">**</bpt>Require a tag and its value on resources<ept id="p1">**</ept> definition, click on it and click <bpt id="p2">**</bpt>Select<ept id="p2">**</ept>.
+5. **[基本]** で、**[ポリシー定義]** 省略記号ボタン (テキストボックスの右側にあります) を選択します。 **[検索]** ボックスに、「**tag**」と入力します。 **"tag"** という文字が含まれる関連ポリシーの一覧が表示されます。 **[タグとその値がリソースに必要]** 定義までスクロールしてクリックし、 **[選択]** をクリックします。
 
    ![image](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, type in **Company : Contoso ** for the tag key/value pair name. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+6.  **[パラメーター]** タブで、キーと値のペア名に「Company : Contoso」と入力します。 **[確認と作成]** をクリックし、**[作成]** をクリックします。
 
   
 
-7. The <bpt id="p1">**</bpt>Require a tag amd its value on resources<ept id="p1">**</ept> policy assignment is now in place. When a resource is created, it must include a tag with the Company : Contoso key.
-   <bpt id="p1">**</bpt>Note - you need to wait up to 30 minutes for the Policy to be applied.<ept id="p1">**</ept> 
+7. **[Require a tag amd its value on resources]\(リソースにタグとその値が必要\)** ポリシーの割り当てが適用されました。 リソースを作成する場合は、キーが "Company : Contoso" であるタグを含める必要があります。
+   **注: ポリシーが適用されるまで最大 30 分待つ必要があります。** 
 
   ![image](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
@@ -38,7 +38,7 @@ wts:
 
 1. Azure portal の **[すべてのサービス]** ブレードで、「**ストレージ アカウント**」を検索して選択し、**[+ 追加]、[+ 新規]、[+ 作成]** のいずれかをクリックします。
 
-2. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
+2. **[ストレージ アカウントの作成]** ブレードの **[基本]** タブで次の情報を入力します (ストレージ アカウントの名前の **xxxx** は、名前がグローバルに一意になるように文字と数字に置き換えます)。 その他は既定値のままにします。
 
     | 設定 | 値 | 
     | --- | --- |
@@ -49,34 +49,34 @@ wts:
 
 3. **[Review + create](レビュー + 作成)** をクリックします。 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We are testing to see what happens when the tag is not supplied. Please note, it can take up to 30 minutes for Policies to take effect.
+    **注:**  タグが提供されない場合に何が起こるかをテストします。 ポリシーが有効になるまで、最大で 30 分かかる可能性があることに注意してください。
 
-4. You will receive a Validation failed message. Click the <bpt id="p1">**</bpt>Click here to view details<ept id="p1">**</ept> message. On the <bpt id="p1">**</bpt>Errors<ept id="p1">**</ept> blade, on the <bpt id="p2">**</bpt>Summary<ept id="p2">**</ept> tab note the error message stating that resource was disallowed by Policy.
+4. 次の確認失敗メッセージが表示されます。 **[ここをクリックして詳細を表示する]** メッセージをクリックします。 **[エラー]** ブレードの **[概要]** タブで、ポリシーによってリソースが許可されていないことを伝えるエラー メッセージに注意します。
 
     **注:** [未処理エラー] タブを表示すると、必要な特定のタグ名が表示されます。 
 
     ![ポリシー エラーのために許可されていない所を示すスクリーンショット。](../images/1704.png)
 
 
-5. Close the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> pane and click <bpt id="p2">**</bpt>Previous<ept id="p2">**</ept> (bottom of the screen). Provide the tagging information. 
+5. **[エラー]** ペインを閉じて、**[前へ]** (画面の下部) をクリックします。 タグ付け情報を入力します。 
 
     | 設定 | 値 | 
     | --- | --- |
     | タグ名 | **Company:Contoso** (ドロップダウン リストにない可能性があります) |
 
-6. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and verify that the validation was successful. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to deploy the storage account. 
+6. **[確認と作成]** をクリックし、検証が完了したことを確認します。 **[作成]** をクリックして、ストレージ アカウントをデプロイします。 
 
 # <a name="task-3-view-all-resources-with-a-specific-tag"></a>タスク 3:特定のタグを持つすべてのリソースを表示します
 
 1. Azure Portal の **[すべてのサービス]** ブレードで、「**タグ**」を検索して選択します。
 
-2. Note all tags and their values. Click the <bpt id="p1">**</bpt>Company : Contoso<ept id="p1">**</ept> key/value pair. This will display a blade showing the newly created storage account, as long as you included the tag during its deployment. 
+2. すべてのタグとその値を書き留めます。 **[Company : Contoso]** というキー/値のペアをクリックします。 これにより、デプロイにおいてタグが含まれていれば、新しく作成したストレージ アカウントを示すブレードが表示されます。 
 
    ![Company と Contoso が選択されたタグのスクリーンショット。](../images/1705.png)
 
 3. ポータルで、**[すべてのリソース]** ブレードを表示します。
 
-4. Click <bpt id="p1">**</bpt>Add filter<ept id="p1">**</ept> and add the <bpt id="p2">**</bpt>Company<ept id="p2">**</ept> tag key as the filter category. With the filter applied, only your storage account will be listed.
+4. **[フィルターの追加]** をクリックし、フィルターのカテゴリとして **Company** タグ キーを追加します。 フィルターが適用されると、自分のストレージ アカウントのみがリストされます。
 
     ![[Company] が選択されている [すべてのリソース] フィルターのスクリーンショット。](../images/1706.png)
 
@@ -94,7 +94,7 @@ wts:
 
 5. 時間があれば、タグなしで別のリソースを作成し、ポリシーが適用されていないことを確認してください。
 
-**[基本]** で、**[ポリシー定義]** 省略記号ボタン (テキストボックスの右側にあります) を選択します。
+おめでとうございます。 このチュートリアルでは、タグ付けが必要なポリシー割り当てを作成し、リソース (ストレージ アカウント) を作成して、タグ付けのポリシーをテストし、指定されたタグでリソースを表示し、タグ付けポリシーを削除しました。
 
 
-**[検索]** ボックスに、「**tag**」と入力します。
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

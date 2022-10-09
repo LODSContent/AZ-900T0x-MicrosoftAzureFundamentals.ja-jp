@@ -15,7 +15,7 @@ wts:
 
 2. **[すべてのサービス]** ブレードで「**ストレージ アカウント**」を検索して選択し、**[+ 追加]、[+ 作成]、[+ 新規]** のいずれかをクリックします。 
 
-3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
+3. **[ストレージ アカウントの作成]** ブレードの **[基本]** タブで次の情報を入力します (ストレージ アカウントの名前の **[xxxx]** は、名前がグローバルに一意になるように文字と数字に置き換えます)。 その他は既定値のままにします。
 
     | 設定 | 値 | 
     | --- | --- |
@@ -30,7 +30,7 @@ wts:
 
 5. **[確認と作成]** をクリックして、ストレージ アカウントの設定を確認し、Azure が構成を検証できるようにします。 
 
-6. Once validated, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Wait for the notification that the account was successfully created. 
+6. 検証できたら、**[作成]** をクリックします。 アカウントが正常に作成されたことを示す通知を待ちます。 
 
 7. [ホーム] ページで、「**ストレージ アカウント**」を検索し、新しいストレージ アカウントがリストアップされていることを確認します。
 
@@ -42,7 +42,7 @@ wts:
 
 1. 新しいストレージ アカウントの名前をクリックし、左側のメニューの **[データ ストレージ]** セクションまでスクロールして、 **[コンテナー]** をクリックします。
 
-2. Click <bpt id="p1">**</bpt>+ Container<ept id="p1">**</ept> and complete the information. Use the Information icons to learn more. When done click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>.
+2. **[+ コンテナー]** をクリックして、情報を入力します。 詳細については、[情報] アイコンを使用してください。 完了したら、 **[作成]** をクリックします。
 
 
     | 設定 | 値 |
@@ -53,16 +53,16 @@ wts:
 
     ![Azure Portal のストレージ アカウントに新しく作成された BLOB コンテナーのスクリーンショット。](../images/0402.png)
 
-4. Open a new browser window and search <bpt id="p1">**</bpt>Bing<ept id="p1">**</ept> for an image of a flower. Right click on the image and save it to your VM. 
+4. 新しいブラウザー ウィンドウを開き、**Bing** で花の画像を検索します。 画像を右クリックして VM に保存します。 
 
 6. ポータルに戻り、**container1** をクリックして、 **[アップロード]** を選択します。
 
-5. Browse for the image file you just saved on your local computer. Select it and then select upload.
+5. ローカル コンピューターに保存したばかりの画像ファイルを参照します。 これを選択してから、[アップロード] を選択します。
 
    
 6. **[詳細設定]** 矢印をクリックし、既定値のままにしますが、使用可能なオプションを確認してから、**[アップロード]** を選択します。
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: You can upload as many blobs as you like in this way. New blobs will be listed within the container.
+    **注**:この方法で、必要な数の BLOB をアップロードできます。 新しい BLOB がコンテナー内に一覧表示されます。
 
 7. ファイルがアップロードされたら、ファイルを右クリックして、[表示/編集]、[ダウンロード]、[プロパティ]、[削除] などのオプションを確認します。 
 
@@ -72,12 +72,12 @@ wts:
 
 1. ストレージ アカウント ブレードに戻り、**[問題に診断と解決]** をクリックします。 
 
-2. Explore some of the most common storage problems. Notice there are multiple troubleshooters here.
+2. 一般的なストレージの問題を調べます。 ここに複数のトラブルシューティング ツールがあります。
 
-3. On the storage account blade, scroll down to the <bpt id="p1">**</bpt>Monitoring<ept id="p1">**</ept> section and click <bpt id="p2">**</bpt>Insights<ept id="p2">**</ept>. Notice there is information on Failures, Performance, Availability, and Capacity. Your information will be different.
+3. ストレージ アカウントのブレードで、**[監視]** セクションまでスクロールして **[Insights]** をクリックします。 障害、パフォーマンス、可用性、容量に関する情報があることを確認します。 環境によって情報は異なります。
 
     ![ストレージ アカウントの Insights ページのスクリーンショット。](../images/0403.PNG)
 
-**[ストレージ アカウントの作成]** ブレードの **[基本]** タブで次の情報を入力します (ストレージ アカウントの名前の **[xxxx]** は、名前がグローバルに一意になるように文字と数字に置き換えます)。
+おめでとうございます! ここでは、ストレージ アカウントを作成し、Storage Blob を操作しました。
 
-その他は既定値のままにします。
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

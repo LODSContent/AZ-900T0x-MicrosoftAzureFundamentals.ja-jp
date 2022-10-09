@@ -19,7 +19,7 @@ wts:
    
 3. [Azure Cloud Shellへようこそ] ダイアログで、**Bash** または **PowerShell** のいずれかを選択するように求められたら、 **[Bash]** を選択します。 
 
-4. A new window will open stating <bpt id="p1">**</bpt>You have no storage mounted<ept id="p1">**</ept>. Select <bpt id="p1">**</bpt>advanced settings<ept id="p1">**</ept>.
+4. 新しいウィンドウが開き、**ストレージがマウントされていない**ことを示します。 **[詳細設定]** を選択します。
 
 5. 詳細設定画面で、次のフィールドに入力し、[ストレージの作成] をクリックします。
     - リソース グループ:**新しいリソース グループを作成する**
@@ -42,7 +42,7 @@ wts:
     az group list --output table
     ```
 
-4. In Cloud Shell enter the command below and make sure that each line, except for the last one, is followed by the backslash (<ph id="ph1">`\`</ph>) character. If you type the whole command on the same line, do not use any backslash characters. 
+4. Cloud Shell で次のコマンドを入力し、最後の行を除くすべての行の最後がバックスラッシュ (`\`) 文字であることを確認します。 同じ行にコマンド全体を入力する場合、バックスラッシュ文字は使用しないでください。 
 
     ```cli
     az vm create \
@@ -56,7 +56,7 @@ wts:
 
     >**注**:Windows コンピューターのコマンド ラインを使用している場合は、バックスラッシュ (`\`) 文字をキャレット (`^`) 文字で置き換えます。
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The command will take 2 to 3 minutes to complete. The command will create a virtual machine and various resources associated with it such as storage, networking and security resources. Do not continue to the next step until the virtual machine deployment is complete. 
+    **注**:コマンドの完了には 2 分から 3 分かかります。 このコマンドは、仮想マシンと、関連するストレージ、ネットワーク、セキュリティ リソースなどのさまざまなリソースを作成します。 仮想マシンのデプロイが完了するまで、次の手順に進まないでください。 
 
 5. コマンドの実行が終了したら、ブラウザーのウィンドウで Cloud Shell ペインを閉じます。
 
@@ -73,19 +73,19 @@ wts:
 
 2. Cloud Shell ペインの左上のドロップダウン メニューで、 **[Bash]** が選択されていることを確認します。
 
-3. Retrieve information about the virtual machine you provisioned, including name, resource group, location, and status. Notice the PowerState is <bpt id="p1">**</bpt>running<ept id="p1">**</ept>.
+3. 名前、リソース グループ、場所、状態など、プロビジョニングを行った仮想マシンに関する情報を取得します。 PowerState が**実行されている**ことを確認してください。
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-4. Stop the virtual machine. Notice the message that billing continues until the virtual machine is deallocated. 
+4. 仮想マシンを停止します。 仮想マシンの割り当てが解除されるまで請求が続行されることを示すメッセージに注意してください。 
 
     ```cli
     az vm stop --resource-group myRGCLI --name myVMCLI
     ```
 
-5. Verify your virtual machine status. The PowerState should now be <bpt id="p1">**</bpt>stopped<ept id="p1">**</ept>.
+5. 仮想マシンの状態を確認します。 これで、PowerState が**停止します**。
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
@@ -99,7 +99,7 @@ wts:
 
 1. **[すべてのサービス]** ブレードから、 **[アドバイザー]** を検索して選択します。 
 
-2. On the <bpt id="p1">**</bpt>Advisor<ept id="p1">**</ept> blade, select <bpt id="p2">**</bpt>Overview<ept id="p2">**</ept>. Notice recommendations are grouped by Reliability, Security, Performance, and Cost. 
+2. **[アドバイザー]** ブレードで、 **[概要]** を選択します。 通知の推奨事項は、信頼性、セキュリティ、パフォーマンス、コストごとにグループ化されているためご注意ください。 
 
     ![アドバイザーの概要ページのスクリーンショット。 ](../images/1103.png)
 
@@ -115,6 +115,6 @@ wts:
 
 6. 時間があれば、Azure CLI の実験を続けてください。 
 
-Congratulations! You have configured Cloud Shell, created a virtual machine using Azure CLI, practiced with Azure CLI commands, and viewed Advisor recommendations.
+おめでとうございます! Cloud Shell を構成し、Azure CLI を使用して仮想マシンを作成し、Azure CLI コマンドで練習し、Advisor の推奨事項を表示しました。
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。

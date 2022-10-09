@@ -6,7 +6,7 @@ wts:
 
 # <a name="03---deploy-azure-container-instances-10-min"></a>03 - Azure Container Instances をデプロイする (10 分)
 
-In this walkthrough we create, configure, and deploy a container by using Azure Container Instances (ACI) in the Azure Portal. The container is a Welcome to ACI web application that displays a static HTML page. 
+このチュートリアルでは、Azure portal で Azure Container Instances (ACI) を使用して、コンテナーを作成、構成、デプロイします。 このコンテナーは、静的な HTML ページを表示する「ACI Web アプリケーションへようこそ」です。 
 
 # <a name="task-1-create-a-container-instance"></a>タスク 1:コンテナー インスタンスを作成する 
 
@@ -31,14 +31,14 @@ In this walkthrough we create, configure, and deploy a container by using Azure 
     | サイズ| ***既定値のままにする***|
 
 
-4. Configure the Networking tab (replace <bpt id="p1">**</bpt>xxxxx<ept id="p1">**</ept> with letters and digits such that the name is globally unique). Leave all other settings at their default values.
+4. ネットワーク タブを構成します (**xxxxx** をグローバルに一意になるように文字と数字に置き換えます)。 その他の設定はすべて、既定値のままにします。
 
     | 設定| 値|
     |--|--|
     | DNS 名ラベル| **mycontainerdnsxxxxx** |
 
     
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a <bpt id="p1">**</bpt>DNS name label not available<ept id="p1">**</ept> error message following the deployment, specify a different DNS name label (replacing the xxxxx) and re-deploy. 
+    **注**:コンテナーは、dns-name-label.region.azurecontainer.io でパブリックからアクセスできるようになります。 デプロイ後に **DNS 名ラベルは使用できません** というエラー メッセージが表示された場合、別の DNS 名ラベル (xxxxxを置き換えます) を指定して再びデプロイします。 
 
 5. **[確認と作成]** を選択して、自動検証プロセスを開始します。
 
@@ -59,11 +59,11 @@ In this walkthrough we create, configure, and deploy a container by using Azure 
 
     ![FQDN が強調表示された、Azure Portal で新しく作成されたコンテナーの概要ペインのスクリーンショット。 ](../images/0202.png)
 
-2. このチュートリアルでは、Azure portal で Azure Container Instances (ACI) を使用して、コンテナーを作成、構成、デプロイします。 
+2. コンテナーの FQDN を新しい Web ブラウザー タブにコピーして、**Enter** キーを押します。 ウェルカム ページが表示されます。 
 
     ![Web ブラウザーに表示される ACI ウェルカム メッセージのスクリーンショット。](../images/0203.png)
 
 
-このコンテナーは、静的な HTML ページを表示する「ACI Web アプリケーションへようこそ」です。
+**お疲れさまでした。** Azure portal を使用して、Azure Container Instances のコンテナーにアプリケーションを正常にデプロイしました。
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**注**:追加コストを回避するには、オプションでこのリソース グループを削除します。 リソース グループを検索し、リソース グループをクリックして、**[リソース グループの削除]** をクリックします。 リソース グループの名前を確認し、**[削除]** をクリックします。 **通知**を監視して、削除の進行状況を確認します。
