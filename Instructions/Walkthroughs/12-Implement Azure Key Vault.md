@@ -44,7 +44,7 @@ wts:
 
     | 設定 | 値 | 
     | --- | --- |
-    | Upload options | **[手動]** |
+    | Upload options | **手動** |
     | Name | **ExamplePassword** |
     | 値 | **hVFkk96** |
 

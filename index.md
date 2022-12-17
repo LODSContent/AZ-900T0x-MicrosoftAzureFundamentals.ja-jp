@@ -6,7 +6,7 @@ layout: home
 
 # <a name="content-directory"></a>コンテンツ ディレクトリ
 
-Hyperlinks to each of the walkthroughs. Instructors may choose to use the walkthrough as a demonstration or a student lab. 
+各チュートリアルへのハイパーリンク。 講師は、このチュートリアルをデモンストレーションまたは受講者用ラボとして使用できます。 
 
 ## <a name="walkthroughs"></a>チュートリアル
 
